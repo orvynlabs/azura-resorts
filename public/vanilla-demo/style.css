@@ -1,0 +1,17 @@
+body {
+    overflow-x: hidden;
+}
+
+.hero-bg {
+    transform-origin: center center;
+    will-change: transform;
+}
+
+.parallax-bg {
+    will-change: transform;
+}
+
+/* Smooth scrolling for anchor links if needed */
+html {
+    scroll-behavior: smooth;
+}

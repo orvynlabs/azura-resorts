@@ -1,0 +1,257 @@
+"use client";
+
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { MapPin, ArrowRight } from "lucide-react";
+
+interface Place {
+    title: string;
+    subtitle: string;
+    description: string;
+    distance: string;
+    image: string;
+    category: string;
+}
+
+const places: Place[] = [
+    {
+        title: "Edakkal Caves",
+        subtitle: "Ancient Petroglyphs",
+        description: "One of the earliest known sites of human habitation in India, Edakkal Caves feature rare petroglyphs dating back to the Neolithic age. A moderate trek leads to this archaeological wonder perched atop Ambukuthi Hill.",
+        distance: "45 km from Azura",
+        image: "/gallery/swing (2).jpg",
+        category: "Heritage",
+    },
+    {
+        title: "Banasura Sagar Dam",
+        subtitle: "India's Largest Earth Dam",
+        description: "The largest earth dam in India and the second largest in Asia, Banasura Sagar offers breathtaking views of submerged hills and islands. Boating on the reservoir is a surreal experience amidst the Western Ghats.",
+        distance: "20 km from Azura",
+        image: "/gallery/fullview.png",
+        category: "Nature",
+    },
+    {
+        title: "Chembra Peak",
+        subtitle: "Heart-Shaped Lake Summit",
+        description: "The highest peak in Wayanad at 2,100 metres, Chembra Peak is famous for its heart-shaped lake near the summit. The trek through rolling grasslands and misty clouds is a must for adventure seekers.",
+        distance: "60 km from Azura",
+        image: "/gallery/swing.jpg",
+        category: "Adventure",
+    },
+    {
+        title: "Thirunelli Temple",
+        subtitle: "Sacred Mountain Temple",
+        description: "An ancient Vishnu temple nestled at the foot of the Brahmagiri hills, Thirunelli is surrounded by dense forests and mountains. The sacred Papanashini stream nearby is believed to absolve sins.",
+        distance: "35 km from Azura",
+        image: "/gallery/aframe (2).jpg",
+        category: "Spiritual",
+    },
+    {
+        title: "Meenmutty Falls",
+        subtitle: "Three-Tiered Waterfall",
+        description: "The largest waterfall in Wayanad, cascading from a height of 300 metres in three tiers through dense forest. A moderately challenging trek through the jungle leads to this stunning natural spectacle.",
+        distance: "50 km from Azura",
+        image: "/gallery/fullproperty.jpg",
+        category: "Nature",
+    },
+    {
+        title: "Wayanad Wildlife Sanctuary",
+        subtitle: "Home to Elephants & Tigers",
+        description: "Part of the Nilgiri Biosphere Reserve, this sanctuary spans 344 sq km and is home to elephants, tigers, leopards, and rare bird species. Jeep safaris offer unforgettable wildlife encounters.",
+        distance: "30 km from Azura",
+        image: "/gallery/aframe (3).jpg",
+        category: "Wildlife",
+    },
+];
+
+export default function PlacesToVisit() {
+    return (
+        <main className="min-h-screen bg-[#FDFBF7] text-black">
+            <Navbar />
+
+            {/* Hero Section */}
+            <div className="relative h-[70vh] w-full overflow-hidden">
+                <Image
+                    src="/gallery/swing (2).jpg"
+                    alt="Wayanad Landscape"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+                <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+                    <div>
+                        <motion.p
+                            initial={{ opacity: 0, y: -10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6 }}
+                            className="text-white/80 text-xs md:text-sm font-montserrat tracking-[0.4em] uppercase mb-6"
+                        >
+                            Explore the Region
+                        </motion.p>
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="font-cinzel text-4xl md:text-7xl text-white tracking-[0.15em] uppercase mb-4"
+                        >
+                            Places to Visit
+                        </motion.h1>
+                        <motion.div
+                            initial={{ width: 0 }}
+                            animate={{ width: "80px" }}
+                            transition={{ delay: 0.6, duration: 0.8 }}
+                            className="h-[1px] bg-[#C1A87D] mx-auto mb-6"
+                        />
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.8, duration: 0.6 }}
+                            className="font-montserrat text-white/70 text-sm md:text-base font-light tracking-wide"
+                        >
+                            Wayanad, Kerala — The Green Paradise of India
+                        </motion.p>
+                    </div>
+                </div>
+            </div>
+
+            {/* Introduction */}
+            <section className="py-24 px-6">
+                <div className="max-w-4xl mx-auto text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+                            Discover Wayanad
+                        </p>
+                        <h2 className="font-cinzel text-2xl md:text-4xl text-[#2C3E50] mb-8 leading-relaxed">
+                            Beyond the Resort, <br />
+                            <span className="text-[#C1A87D]">A World Awaits</span>
+                        </h2>
+                        <div className="w-24 h-[1px] bg-[#C1A87D] mx-auto mb-10" />
+                        <p className="font-montserrat text-gray-600 leading-[2] font-light text-sm md:text-base max-w-3xl mx-auto">
+                            Wayanad is a land of ancient caves, misty peaks, sacred temples, and cascading
+                            waterfalls. From Azura, some of Kerala&apos;s most captivating landscapes are just a
+                            short drive away. Let the Western Ghats be your backdrop for adventure, history,
+                            and spiritual discovery.
+                        </p>
+                    </motion.div>
+                </div>
+            </section>
+
+            {/* Places Grid */}
+            <section className="px-6 pb-24">
+                <div className="max-w-7xl mx-auto space-y-20">
+                    {places.map((place, index) => {
+                        const isReversed = index % 2 !== 0;
+                        return (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.8 }}
+                                className={`
+                                    flex flex-col 
+                                    lg:flex-row ${isReversed ? "lg:flex-row-reverse" : ""} 
+                                    items-center 
+                                    gap-8 lg:gap-16
+                                    group
+                                `}
+                            >
+                                {/* Image */}
+                                <div className="w-full lg:w-[55%] relative h-[350px] md:h-[450px] rounded-3xl overflow-hidden shadow-xl">
+                                    <Image
+                                        src={place.image}
+                                        alt={place.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                                    {/* Category Badge */}
+                                    <div className="absolute top-6 left-6">
+                                        <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase bg-white/90 text-[#2C3E50] px-4 py-2 rounded-full font-medium backdrop-blur-sm">
+                                            {place.category}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Content */}
+                                <div className={`w-full lg:w-[45%] ${isReversed ? "lg:pr-8" : "lg:pl-8"}`}>
+                                    <p className="font-montserrat text-xs tracking-[0.3em] text-[#C1A87D] uppercase mb-4 font-medium">
+                                        {place.subtitle}
+                                    </p>
+                                    <h3 className="font-cinzel text-2xl md:text-4xl text-[#2C3E50] mb-6 tracking-wide">
+                                        {place.title}
+                                    </h3>
+                                    <div className="flex items-center gap-2 mb-6">
+                                        <div className="h-[1px] w-10 bg-[#C1A87D]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#C1A87D]" />
+                                        <div className="h-[1px] w-10 bg-[#C1A87D]" />
+                                    </div>
+                                    <p className="font-montserrat text-gray-600 leading-[1.9] font-light text-sm md:text-base mb-8">
+                                        {place.description}
+                                    </p>
+
+                                    <div className="flex items-center gap-6">
+                                        <div className="flex items-center gap-2 text-gray-500">
+                                            <MapPin size={16} className="text-[#C1A87D]" />
+                                            <span className="font-montserrat text-xs tracking-wider font-medium">
+                                                {place.distance}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
+                </div>
+            </section>
+
+            {/* Map / CTA Section */}
+            <section className="relative py-28 overflow-hidden">
+                <Image
+                    src="/gallery/fullview.png"
+                    alt="Wayanad Panorama"
+                    fill
+                    className="object-cover"
+                />
+                <div className="absolute inset-0 bg-black/60" />
+                <div className="relative z-10 max-w-4xl mx-auto text-center px-6">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+                            Plan Your Exploration
+                        </p>
+                        <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-6 tracking-wide">
+                            Let Us Curate <br /> Your Itinerary
+                        </h2>
+                        <p className="font-montserrat text-white/70 font-light leading-loose max-w-2xl mx-auto mb-10 text-sm md:text-base">
+                            Our concierge team will help plan day trips, arrange private guides,
+                            and ensure you experience the very best of Wayanad during your stay.
+                        </p>
+                        <a
+                            href="/contact"
+                            className="font-montserrat inline-flex items-center gap-3 bg-[#C1A87D] text-white px-10 py-4 rounded-full uppercase tracking-[0.2em] text-xs font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg"
+                        >
+                            Get in Touch
+                            <ArrowRight size={16} />
+                        </a>
+                    </motion.div>
+                </div>
+            </section>
+
+            <Footer />
+        </main>
+    );
+}
