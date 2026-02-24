@@ -41,7 +41,7 @@ const highlights = [
 
 export default function About() {
     return (
-        <main className="min-h-screen bg-[#FDFBF7] text-black">
+        <main className="min-h-screen bg-[#f8f5ef] text-black">
             <Navbar />
 
             {/* Hero Section */}
@@ -145,7 +145,7 @@ export default function About() {
             </section>
 
             {/* Highlights Grid */}
-            <section className="py-24 px-6 bg-[#FDFBF7]">
+            <section className="py-24 px-6 bg-[#f8f5ef]">
                 <div className="max-w-6xl mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -188,7 +188,7 @@ export default function About() {
             </section>
 
             {/* Side-by-Side Story Section */}
-            <section className="py-24 px-6 bg-[#FDFBF7]">
+            <section className="py-24 px-6 bg-[#f8f5ef]">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     {/* Image */}
                     <motion.div
@@ -269,7 +269,7 @@ export default function About() {
                         </p>
                         <a
                             href="/contact"
-                            className="font-montserrat inline-block bg-[#C1A87D] text-white px-10 py-4 rounded-full uppercase tracking-[0.2em] text-xs font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg hover:shadow-xl"
+                            className="font-montserrat inline-block bg-[#C1A87D] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg hover:shadow-xl"
                         >
                             Plan Your Visit
                         </a>

@@ -3,6 +3,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface ExperienceItem {
@@ -14,14 +15,14 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
     {
-        title: "THE DINING PAVILION",
-        description: "When on holiday, guests seek to immerse themselves in nature's beauty and savor authentic, earthy meals. Azura's dining pavilion fulfills this by serving dishes made from the finest regional ingredients, rich in local flavors. Our expert chef and team delight foodie travelers with a diverse menu featuring both Indian and global delicacies, ensuring a memorable dining experience.",
-        image: "/gallery/dining.jpg",
-    },
-    {
         title: "WATER VIEW INFINITY",
         description: "Inspired by the tranquil waters of the Padinjarathara reservoir, our view blends seamlessly into the natural surroundings, offering uninterrupted panoramas of the serene landscape. Designed to mirror the lake's charm, it creates the illusion of floating in nature itself — an unforgettable experience at Wayanad's finest luxury escape.",
         image: "/gallery/fullview.png",
+    },
+    {
+        title: "THE DINING PAVILION",
+        description: "When on holiday, guests seek to immerse themselves in nature's beauty and savor authentic, earthy meals. Azura's dining pavilion fulfills this by serving dishes made from the finest regional ingredients, rich in local flavors. Our expert chef and team delight foodie travelers with a diverse menu featuring both Indian and global delicacies, ensuring a memorable dining experience.",
+        image: "/gallery/dining.jpg",
         reverse: true,
     },
     {
@@ -39,11 +40,11 @@ const experiences: ExperienceItem[] = [
 
 export default function Experiences() {
     return (
-        <main className="min-h-screen bg-[#FDFBF7] text-black">
+        <main className="min-h-screen bg-[#f8f5ef]">
             <Navbar />
 
             {/* Hero Section */}
-            <div className="relative h-[70vh] w-full overflow-hidden">
+            <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
                 <Image
                     src="/gallery/fullproperty.jpg"
                     alt="Azura Experiences"
@@ -51,75 +52,83 @@ export default function Experiences() {
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
-                <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-                    <div>
-                        <motion.p
-                            initial={{ opacity: 0, y: -10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.6 }}
-                            className="text-white/80 text-xs md:text-sm font-montserrat tracking-[0.4em] uppercase mb-6"
-                        >
-                            Discover
-                        </motion.p>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.8, delay: 0.2 }}
-                            className="font-cinzel text-4xl md:text-7xl text-white tracking-[0.15em] mb-4"
-                        >
-                            EXPERIENCES
-                        </motion.h1>
-                        <motion.div
-                            initial={{ width: 0 }}
-                            animate={{ width: "80px" }}
-                            transition={{ delay: 0.6, duration: 0.8 }}
-                            className="h-[1px] bg-[#C1A87D] mx-auto mb-6"
-                        />
-                        <motion.p
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.8, duration: 0.6 }}
-                            className="font-montserrat text-white/70 text-sm md:text-base font-light tracking-wide"
-                        >
-                            A Tailored Journey Through Grandeur
-                        </motion.p>
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+                    <motion.p
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6"
+                    >
+                        Discover
+                    </motion.p>
+                    <motion.h1
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="font-cinzel text-4xl md:text-6xl lg:text-7xl text-white tracking-[0.2em] uppercase mb-6"
+                    >
+                        E x p e r i e n c e s
+                    </motion.h1>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.6, duration: 0.6 }}
+                        className="flex items-center justify-center gap-3"
+                    >
+                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
+                        <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
+                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
+                    </motion.div>
+                    {/* Breadcrumb */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 0.6 }}
+                        transition={{ delay: 0.8, duration: 0.5 }}
+                        className="mt-8"
+                    >
+                        <p className="font-montserrat text-[11px] tracking-[0.2em] text-white/60">
+                            <Link href="/" className="hover:text-[#C1A87D] transition-colors">Home</Link>
+                            <span className="mx-3">—</span>
+                            <span className="text-white/80">Experiences</span>
+                        </p>
+                    </motion.div>
                 </div>
             </div>
 
             {/* Introduction */}
-            <section className="py-24 px-6 max-w-4xl mx-auto text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <div className="flex items-center justify-center gap-3 text-xs font-montserrat tracking-[0.3em] uppercase text-gray-400 mb-10">
-                        <a href="/" className="hover:text-[#C1A87D] transition-colors">Home</a>
-                        <span className="text-[#C1A87D]">|</span>
-                        <span className="text-[#2C3E50]">Facilities</span>
-                    </div>
-                    <h2 className="font-cinzel text-2xl md:text-[2.2rem] leading-snug mb-8 tracking-[0.06em] uppercase text-[#2C3E50]">
-                        A Trail Through Grandeur <br />
-                        Featuring Premium Amenities
-                    </h2>
+            <section className="py-28 md:py-36 px-6">
+                <div className="max-w-[900px] mx-auto text-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6 font-medium">
+                            Curated For You
+                        </p>
+                        <h2 className="font-playfair-display text-[1.6rem] md:text-[2.4rem] lg:text-[2.8rem] leading-[1.35] text-[#1a1a1a] tracking-[0.03em] mb-10">
+                            A Trail Through Grandeur <br />
+                            Featuring Unique Experiences
+                        </h2>
 
-                    <div className="flex items-center justify-center gap-3 mb-10">
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
-                        <div className="w-3 h-3 rounded-full border border-[#C1A87D]" />
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
-                    </div>
+                        {/* Decorative Gold Divider */}
+                        <div className="flex items-center justify-center gap-3 mb-10">
+                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
+                            <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
+                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
+                        </div>
 
-                    <p className="font-montserrat text-gray-600 leading-[2] font-light text-sm md:text-base max-w-3xl mx-auto">
-                        At Azura, every facility reflects unmatched elegance and excellence. From premium amenities to personalized service, every detail is thoughtfully crafted to elevate your stay. Experience luxury redefined — where the comforts of a world-class retreat meet the breathtaking beauty of Wayanad.
-                    </p>
-                </motion.div>
+                        <p className="font-montserrat text-[#5a5a5a] text-[13px] md:text-[15px] leading-[2.1] font-light max-w-[800px] mx-auto">
+                            At Azura, every experience is crafted to immerse you in the natural beauty and tranquility of Wayanad. From serene water views to authentic culinary journeys, every moment is thoughtfully designed to create lasting memories amidst the breathtaking beauty of our secluded peninsula retreat.
+                        </p>
+                    </motion.div>
+                </div>
             </section>
 
             {/* Experience Cards */}
-            <section className="pb-32 space-y-28 md:space-y-40">
+            <section className="pb-28 md:pb-36 space-y-24 md:space-y-32">
                 {experiences.map((item, index) => (
                     <motion.div
                         key={index}
@@ -129,20 +138,20 @@ export default function Experiences() {
                         transition={{ duration: 0.8 }}
                         className="relative group"
                     >
-                        {/* Image — flush to edge, rounded only on inner side */}
+                        {/* Image — flush to screen edge, rounded only on inner side */}
                         <div
                             className={`
                                 relative 
-                                w-full lg:w-[65%] 
-                                h-[350px] md:h-[450px] lg:h-[520px] 
-                                overflow-hidden shadow-xl
+                                w-full lg:w-[62%] 
+                                h-[320px] md:h-[420px] lg:h-[520px] 
+                                overflow-hidden
                                 ${item.reverse ? 'lg:ml-auto' : 'lg:mr-auto'}
                             `}
                             style={{
-                                borderTopLeftRadius: item.reverse ? '1.5rem' : 0,
-                                borderBottomLeftRadius: item.reverse ? '1.5rem' : 0,
-                                borderTopRightRadius: item.reverse ? 0 : '1.5rem',
-                                borderBottomRightRadius: item.reverse ? 0 : '1.5rem',
+                                borderTopLeftRadius: item.reverse ? '1rem' : 0,
+                                borderBottomLeftRadius: item.reverse ? '1rem' : 0,
+                                borderTopRightRadius: item.reverse ? 0 : '1rem',
+                                borderBottomRightRadius: item.reverse ? 0 : '1rem',
                             }}
                         >
                             <Image
@@ -153,7 +162,7 @@ export default function Experiences() {
                             />
                         </div>
 
-                        {/* Floating Content Card — overlaps image from corner */}
+                        {/* Floating Content Card — overlaps image */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -162,33 +171,38 @@ export default function Experiences() {
                             className={`
                                 relative lg:absolute
                                 ${item.reverse
-                                    ? 'lg:left-[8%] xl:left-[10%]'
-                                    : 'lg:right-[8%] xl:right-[10%]'
+                                    ? 'lg:left-[6%] xl:left-[8%]'
+                                    : 'lg:right-[6%] xl:right-[8%]'
                                 }
-                                lg:bottom-[-2.5rem]
-                                w-[90%] md:w-[75%] lg:w-[40%]
+                                lg:top-1/2 lg:-translate-y-1/2
+                                w-[92%] md:w-[80%] lg:w-[42%]
                                 mx-auto lg:mx-0
-                                mt-[-3rem] lg:mt-0
+                                mt-[-2rem] lg:mt-0
                                 bg-white
-                                rounded-2xl
-                                p-8 md:p-10 lg:p-12
-                                shadow-xl
+                                rounded-[1rem]
+                                p-8 md:p-10 lg:p-14
+                                shadow-[0_4px_40px_rgba(0,0,0,0.08)]
                                 z-20
                             `}
                         >
                             <div className="text-center">
-                                <h3 className="font-cinzel text-xl md:text-2xl mb-5 text-[#2C3E50] tracking-[0.05em] uppercase leading-snug">
+                                {/* Gold label */}
+                                <p className="font-montserrat text-[10px] tracking-[0.4em] text-[#C1A87D] uppercase mb-4 font-medium">
+                                    {index === 0 ? "Infinity View" : index === 1 ? "Culinary Excellence" : index === 2 ? "Accommodation" : "Leisure & Fun"}
+                                </p>
+
+                                <h3 className="font-playfair-display text-xl md:text-[1.5rem] lg:text-[1.7rem] mb-6 text-[#1a1a1a] tracking-[0.02em] leading-snug">
                                     {item.title}
                                 </h3>
 
                                 {/* Decorative Divider */}
                                 <div className="flex items-center justify-center gap-3 mb-6">
-                                    <div className="h-[1px] w-10 bg-[#C1A87D]" />
-                                    <div className="w-2 h-2 rounded-full border border-[#C1A87D]" />
-                                    <div className="h-[1px] w-10 bg-[#C1A87D]" />
+                                    <div className="h-[1px] w-12 bg-[#C1A87D]" />
+                                    <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
+                                    <div className="h-[1px] w-12 bg-[#C1A87D]" />
                                 </div>
 
-                                <p className="font-montserrat text-gray-600 leading-[1.9] text-sm font-light">
+                                <p className="font-montserrat text-[#5a5a5a] leading-[2] text-[13px] font-light">
                                     {item.description}
                                 </p>
                             </div>

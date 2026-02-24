@@ -51,8 +51,8 @@ export default function HomeAccommodation() {
     }, [goNext]);
 
     return (
-        <section className="py-28 md:py-36 bg-[#FDFBF7] overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
+        <section className="py-28 md:py-40 bg-transparent overflow-hidden">
+            <div className="max-w-[1280px] mx-auto px-6 md:px-10">
                 {/* Section Heading */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
@@ -61,18 +61,18 @@ export default function HomeAccommodation() {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-14 md:mb-20"
                 >
-                    <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-4 font-medium">
+                    <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-5 font-medium">
                         The Stay
                     </p>
-                    <h2 className="font-cinzel text-2xl md:text-[2.2rem] leading-snug text-[#2C3E50] uppercase tracking-[0.06em] mb-6">
+                    <h2 className="font-playfair-display text-2xl md:text-[2.2rem] leading-snug text-[#1a1a1a] tracking-[0.03em] mb-6">
                         Cottages Cosily Tucked Away Below <br /> The Sky-Scraping Trees
                     </h2>
 
                     {/* Gold Ornamental Divider */}
                     <div className="flex items-center justify-center gap-3">
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
-                        <div className="w-3 h-3 rounded-full border border-[#C1A87D]" />
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
+                        <div className="h-[1px] w-20 bg-[#C1A87D]/50" />
+                        <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
+                        <div className="h-[1px] w-20 bg-[#C1A87D]/50" />
                     </div>
                 </motion.div>
             </div>
@@ -98,16 +98,16 @@ export default function HomeAccommodation() {
                             className="object-cover"
                             sizes="22vw"
                         />
-                        {/* Dim overlay */}
-                        <div className="absolute inset-0 bg-white/50" />
+                        {/* Dim overlay — frosted cream to blend with bg */}
+                        <div className="absolute inset-0 bg-[#f8f5ef]/50 backdrop-blur-[1px]" />
 
                         {/* Left Arrow */}
                         <button
                             onClick={(e) => { e.stopPropagation(); goPrev(); }}
-                            className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white shadow-lg flex items-center justify-center text-[#2C3E50] hover:bg-[#C1A87D] hover:text-white transition-all duration-300 z-10"
+                            className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[#1a1a1a] hover:bg-[#C1A87D] hover:text-white transition-all duration-300 z-10"
                             aria-label="Previous slide"
                         >
-                            <ChevronLeft size={22} />
+                            <ChevronLeft size={20} />
                         </button>
                     </motion.div>
 
@@ -116,7 +116,7 @@ export default function HomeAccommodation() {
                         <motion.div
                             key={`center-${current}`}
                             className="relative flex-shrink-0 w-[56%] md:w-[52%] h-[320px] md:h-[480px] lg:h-[560px] overflow-hidden shadow-2xl z-10"
-                            style={{ borderRadius: "0.75rem" }}
+                            style={{ borderRadius: "0.5rem" }}
                             initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: 0.95 }}
@@ -130,6 +130,13 @@ export default function HomeAccommodation() {
                                 sizes="52vw"
                                 priority
                             />
+                            {/* Subtle bottom gradient with title */}
+                            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/50 to-transparent" />
+                            <div className="absolute bottom-6 left-0 right-0 text-center">
+                                <p className="font-montserrat text-[10px] tracking-[0.3em] uppercase text-white/90">
+                                    {slides[current].title}
+                                </p>
+                            </div>
                         </motion.div>
                     </AnimatePresence>
 
@@ -150,16 +157,16 @@ export default function HomeAccommodation() {
                             className="object-cover"
                             sizes="22vw"
                         />
-                        {/* Dim overlay */}
-                        <div className="absolute inset-0 bg-white/50" />
+                        {/* Dim overlay — frosted cream to blend with bg */}
+                        <div className="absolute inset-0 bg-[#f8f5ef]/50 backdrop-blur-[1px]" />
 
                         {/* Right Arrow */}
                         <button
                             onClick={(e) => { e.stopPropagation(); goNext(); }}
-                            className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white shadow-lg flex items-center justify-center text-[#2C3E50] hover:bg-[#C1A87D] hover:text-white transition-all duration-300 z-10"
+                            className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-white/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-[#1a1a1a] hover:bg-[#C1A87D] hover:text-white transition-all duration-300 z-10"
                             aria-label="Next slide"
                         >
-                            <ChevronRight size={22} />
+                            <ChevronRight size={20} />
                         </button>
                     </motion.div>
                 </div>
@@ -171,8 +178,8 @@ export default function HomeAccommodation() {
                             key={index}
                             onClick={() => setCurrent(index)}
                             className={`rounded-full transition-all duration-400 ${index === current
-                                    ? "w-8 h-2.5 bg-[#C1A87D]"
-                                    : "w-2.5 h-2.5 bg-[#2C3E50]/20 hover:bg-[#C1A87D]/50"
+                                ? "w-8 h-2.5 bg-[#C1A87D]"
+                                : "w-2.5 h-2.5 bg-[#1a1a1a]/15 hover:bg-[#C1A87D]/50"
                                 }`}
                             aria-label={`Go to slide ${index + 1}`}
                         />

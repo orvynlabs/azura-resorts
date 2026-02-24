@@ -6,15 +6,17 @@ import HomeDestination from "@/components/HomeDestination";
 import HomeActivities from "@/components/HomeActivities";
 import HomePool from "@/components/HomePool";
 import HomeSpa from "@/components/HomeSpa";
+import Exclusivity from "@/components/Exclusivity";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FDFBF7]">
+    <main className="min-h-screen bg-[#f8f5ef]">
       <Navbar />
       <Hero />
       <HomeIntro />
+      <Exclusivity />
       <HomeAccommodation />
       <HomeDining />
       <HomeDestination />
@@ -25,3 +27,4 @@ export default function Home() {
     </main>
   );
 }
+

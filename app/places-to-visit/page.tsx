@@ -68,7 +68,7 @@ const places: Place[] = [
 
 export default function PlacesToVisit() {
     return (
-        <main className="min-h-screen bg-[#FDFBF7] text-black">
+        <main className="min-h-screen bg-[#f8f5ef] text-black">
             <Navbar />
 
             {/* Hero Section */}
@@ -242,7 +242,7 @@ export default function PlacesToVisit() {
                         </p>
                         <a
                             href="/contact"
-                            className="font-montserrat inline-flex items-center gap-3 bg-[#C1A87D] text-white px-10 py-4 rounded-full uppercase tracking-[0.2em] text-xs font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg"
+                            className="font-montserrat inline-flex items-center gap-3 bg-[#C1A87D] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg"
                         >
                             Get in Touch
                             <ArrowRight size={16} />

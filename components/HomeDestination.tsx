@@ -101,11 +101,11 @@ export default function HomeDestination() {
                         className="object-cover"
                         priority={current === 0}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-black/10" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/10 to-black/30" />
                 </motion.div>
             </AnimatePresence>
 
-            {/* Content Card — Floating on Right */}
+            {/* Content Card — Glassmorphism on Right */}
             <div className="absolute inset-0 flex items-center justify-end z-10 px-6 md:px-16 lg:px-24">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -115,32 +115,32 @@ export default function HomeDestination() {
                         animate="center"
                         exit="exit"
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="bg-white/90 backdrop-blur-md w-full max-w-xl p-10 md:p-14 shadow-2xl rounded-sm"
+                        className="bg-white/10 backdrop-blur-xl w-full max-w-xl p-10 md:p-14 shadow-2xl border border-white/20"
                     >
                         {/* Subtitle */}
-                        <p className="font-montserrat text-[11px] tracking-[0.4em] text-[#C1A87D] uppercase mb-5 font-medium">
+                        <p className="font-montserrat text-[10px] tracking-[0.5em] text-[#C1A87D] uppercase mb-5 font-medium">
                             {slides[current].subtitle}
                         </p>
 
                         {/* Title */}
-                        <h2 className="font-cinzel text-2xl md:text-[2rem] leading-snug text-[#2C3E50] uppercase tracking-[0.05em] mb-3">
+                        <h2 className="font-playfair-display text-2xl md:text-[2rem] leading-snug text-white tracking-[0.02em] mb-3">
                             {slides[current].title}
                         </h2>
 
                         {/* Tagline */}
-                        <p className="font-cinzel text-sm md:text-base text-[#C1A87D] uppercase tracking-[0.08em] mb-6">
+                        <p className="font-montserrat text-[12px] md:text-[13px] text-[#C1A87D]/80 uppercase tracking-[0.1em] mb-6 font-light">
                             {slides[current].tagline}
                         </p>
 
                         {/* Decorative Divider */}
                         <div className="flex items-center gap-3 mb-6">
-                            <div className="h-[1px] w-10 bg-[#C1A87D]" />
-                            <div className="w-2 h-2 rounded-full border border-[#C1A87D]" />
-                            <div className="h-[1px] w-10 bg-[#C1A87D]" />
+                            <div className="h-[1px] w-12 bg-white/30" />
+                            <div className="w-2 h-2 rotate-45 border border-[#C1A87D]/60" />
+                            <div className="h-[1px] w-12 bg-white/30" />
                         </div>
 
                         {/* Description */}
-                        <p className="font-montserrat text-gray-600 text-sm leading-[1.9] font-light">
+                        <p className="font-montserrat text-white/70 text-[13px] leading-[2] font-light">
                             {slides[current].description}
                         </p>
                     </motion.div>
@@ -154,8 +154,8 @@ export default function HomeDestination() {
                         key={index}
                         onClick={() => goToSlide(index)}
                         className={`rounded-full transition-all duration-500 ${index === current
-                                ? "w-10 h-3 bg-[#C1A87D]"
-                                : "w-3 h-3 bg-white/60 hover:bg-white/90"
+                            ? "w-10 h-2.5 bg-[#C1A87D]"
+                            : "w-2.5 h-2.5 bg-white/30 hover:bg-white/60"
                             }`}
                         aria-label={`Go to slide ${index + 1}`}
                     />
@@ -163,7 +163,7 @@ export default function HomeDestination() {
             </div>
 
             {/* Progress Bar */}
-            <div className="absolute bottom-0 left-0 w-full h-[3px] bg-white/10 z-20">
+            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-white/5 z-20">
                 <motion.div
                     key={current}
                     className="h-full bg-[#C1A87D]"
