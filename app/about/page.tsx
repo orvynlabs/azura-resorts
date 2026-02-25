@@ -46,13 +46,16 @@ export default function About() {
 
             {/* Hero Section */}
             <div className="relative h-[70vh] w-full overflow-hidden">
-                <Image
-                    src="/gallery/fullview.png"
-                    alt="Azura Resort Panoramic View"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <div className="relative w-full h-full">
+                    <video
+                        src="/gallery/about/bg-video.mp4"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
                 <div className="absolute inset-0 flex items-center justify-center text-center px-4">
                     <div>

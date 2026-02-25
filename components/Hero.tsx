@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import HeroOverlay from "./HeroOverlay";
+import LiquidEffect from "./LiquidEffect";
 import Image from "next/image";
 
 export default function Hero() {
@@ -36,12 +37,17 @@ export default function Hero() {
                     fill
                     priority
                     unoptimized
+                    quality={100}
                     className="object-cover object-center animate-kenburns"
+                    style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.15)" }}
                     sizes="100vw"
                 />
                 {/* Fog overlay — inside the parallax container */}
                 <HeroOverlay />
             </motion.div>
+
+            {/* Liquid ripple effect — only on hero section */}
+            <LiquidEffect />
 
             {/* Content */}
             <div className="relative z-10 h-full flex flex-col items-center justify-center text-center text-white px-4">

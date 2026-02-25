@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Dancing_Script, Cinzel, Montserrat, Bricolage_Grotesque, Playfair_Display } from "next/font/google"; // Added Playfair_Display
 import "./globals.css";
-import LiquidEffect from "@/components/LiquidEffect";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -25,7 +24,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${inter.variable} ${dancingScript.variable} ${cinzel.variable} ${montserrat.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} font-sans antialiased`} suppressHydrationWarning>
-        <LiquidEffect />
         <ScrollToTop />
         <WhatsAppButton />
         {children}

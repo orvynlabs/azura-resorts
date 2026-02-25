@@ -16,54 +16,111 @@ interface Place {
 }
 
 const places: Place[] = [
+    // --- VIEWPOINTS ---
+    {
+        title: "Nellarachal View Point",
+        subtitle: "Lakeside Sunset Haven",
+        description: "A hidden gem near Meppadi where the Karapuzha reservoir backwaters wrap around a small peninsula. Known for its bucolic charm and golden sunset views over the water.",
+        distance: "3.6 km from Azura",
+        image: "/gallery/placeToVisit/nellarchal.webp",
+        category: "Viewpoint",
+    },
     {
         title: "Edakkal Caves",
         subtitle: "Ancient Petroglyphs",
-        description: "One of the earliest known sites of human habitation in India, Edakkal Caves feature rare petroglyphs dating back to the Neolithic age. A moderate trek leads to this archaeological wonder perched atop Ambukuthi Hill.",
-        distance: "45 km from Azura",
-        image: "/gallery/swing (2).jpg",
+        description: "A moderate trek leads to these prehistoric caves featuring rock engravings dating back to 6000 BC, offering a glimpse into early human civilization.",
+        distance: "15 km from Azura",
+        image: "/gallery/placeToVisit/edakkal-caves.webp",
         category: "Heritage",
     },
     {
-        title: "Banasura Sagar Dam",
-        subtitle: "India's Largest Earth Dam",
-        description: "The largest earth dam in India and the second largest in Asia, Banasura Sagar offers breathtaking views of submerged hills and islands. Boating on the reservoir is a surreal experience amidst the Western Ghats.",
+        title: "900 Kandi Glass Bridge",
+        subtitle: "Walk Above the Clouds",
+        description: "An adrenaline-pumping architectural marvel in the middle of a deep jungle. The transparent bridge provides a 360-degree view of the tropical rainforest 100 feet below.",
         distance: "20 km from Azura",
-        image: "/gallery/fullview.png",
+        image: "/gallery/placeToVisit/900-kandi glass bridge.webp",
+        category: "Adventure",
+    },
+
+    // --- WATERFALLS ---
+    {
+        title: "Kanthanpara Waterfalls",
+        subtitle: "Serene & Family Friendly",
+        description: "A smaller, peaceful waterfall surrounded by tea and coffee plantations. Its gentle cascades make it safer for families and children compared to larger falls.",
+        distance: "10 km from Azura",
+        image: "/gallery/placeToVisit/kanthanpara-waterfalls.webp",
         category: "Nature",
     },
     {
+        title: "Soochipara Waterfalls",
+        subtitle: "Sentinel Rock Cascades",
+        description: "A spectacular three-tiered waterfall where the water crashes down into a large pool. A short trek through the tea estates leads you to this refreshing natural shower.",
+        distance: "21 km from Azura",
+        image: "/gallery/placeToVisit/Soochipara_Falls,_Wayanad.webp",
+        category: "Nature",
+    },
+
+    // --- NATURE & ADVENTURE ---
+    {
         title: "Chembra Peak",
-        subtitle: "Heart-Shaped Lake Summit",
-        description: "The highest peak in Wayanad at 2,100 metres, Chembra Peak is famous for its heart-shaped lake near the summit. The trek through rolling grasslands and misty clouds is a must for adventure seekers.",
-        distance: "60 km from Azura",
-        image: "/gallery/swing.jpg",
+        subtitle: "Heart-Shaped Lake Trek",
+        description: "The highest peak in Wayanad. Famous for its heart-shaped lake (Hridaya Saras) near the top, offering a challenging but rewarding trek through misty grasslands.",
+        distance: "15 km from Azura",
+        image: "/gallery/placeToVisit/chembra_peak.webp",
         category: "Adventure",
     },
     {
-        title: "Thirunelli Temple",
-        subtitle: "Sacred Mountain Temple",
-        description: "An ancient Vishnu temple nestled at the foot of the Brahmagiri hills, Thirunelli is surrounded by dense forests and mountains. The sacred Papanashini stream nearby is believed to absolve sins.",
-        distance: "35 km from Azura",
-        image: "/gallery/aframe (2).jpg",
-        category: "Spiritual",
+        title: "Muthanga Wildlife Sanctuary",
+        subtitle: "Jungle Jeep Safari",
+        description: "Experience the wilderness of the Nilgiri Biosphere. Jeep safaris here offer high chances of spotting wild elephants, deer, and diverse bird species in their natural habitat.",
+        distance: "31 km from Azura",
+        image: "/gallery/placeToVisit/Tholpetty_Wildlife_Sanctuary_Whe.webp",
+        category: "Wildlife",
     },
     {
-        title: "Meenmutty Falls",
-        subtitle: "Three-Tiered Waterfall",
-        description: "The largest waterfall in Wayanad, cascading from a height of 300 metres in three tiers through dense forest. A moderately challenging trek through the jungle leads to this stunning natural spectacle.",
-        distance: "50 km from Azura",
-        image: "/gallery/fullproperty.jpg",
+        title: "Kuruva Island",
+        subtitle: "Bamboo Rafting Experience",
+        description: "A massive protected river delta on the Kabini River. Explore the interconnected uninhabited islands via bamboo rafts and walking trails through dense evergreen forests.",
+        distance: "46 km from Azura",
+        image: "/gallery/placeToVisit/kuruva-island.webp",
         category: "Nature",
     },
     {
-        title: "Wayanad Wildlife Sanctuary",
-        subtitle: "Home to Elephants & Tigers",
-        description: "Part of the Nilgiri Biosphere Reserve, this sanctuary spans 344 sq km and is home to elephants, tigers, leopards, and rare bird species. Jeep safaris offer unforgettable wildlife encounters.",
+        title: "En Ooru",
+        subtitle: "Tribal Heritage Village",
+        description: "Kerala's first tribal heritage village. It offers an immersive look into the traditions, handicrafts, and ethnic food of Wayanad's indigenous communities.",
         distance: "30 km from Azura",
-        image: "/gallery/aframe (3).jpg",
-        category: "Wildlife",
+        image: "/gallery/placeToVisit/en_uru_kerala_s_first_tribal_her.webp",
+        category: "Heritage",
     },
+
+    // --- LAKES & DAMS ---
+    {
+        title: "Karappuzha Dam",
+        subtitle: "Picturesque Earth Dam",
+        description: "One of the largest earth dams in India. The surrounding park and the massive reservoir offer boating facilities and a beautiful environment for evening walks.",
+        distance: "9.6 km from Azura",
+        image: "/gallery/placeToVisit/Karapuzha-Dam.webp",
+        category: "Nature",
+    },
+    {
+        title: "Pookode Lake",
+        subtitle: "Natural Freshwater Retreat",
+        description: "A natural freshwater lake nestled between evergreen forests. Perfect for pedal boating and walking along the shaded pathway circling the lake.",
+        distance: "22 km from Azura",
+        image: "/gallery/placeToVisit/pookode-lake.webp",
+        category: "Nature",
+    },
+    {
+        title: "Banasura Sagar Dam",
+        subtitle: "Asia's Largest Earth Dam",
+        description: "Known for its stunning islands formed by the reservoir's backwaters. Visitors can enjoy speed boating and trekking to the nearby Banasura Peak.",
+        distance: "39 km from Azura",
+        image: "/gallery/placeToVisit/banasura-sagar.webp",
+        category: "Nature",
+    },
+
+
 ];
 
 export default function PlacesToVisit() {
@@ -74,7 +131,7 @@ export default function PlacesToVisit() {
             {/* Hero Section */}
             <div className="relative h-[70vh] w-full overflow-hidden">
                 <Image
-                    src="/gallery/swing (2).jpg"
+                    src="/gallery/placeToVisit/wayanad.webp"
                     alt="Wayanad Landscape"
                     fill
                     className="object-cover"

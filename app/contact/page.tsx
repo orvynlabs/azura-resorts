@@ -14,13 +14,15 @@ export default function Contact() {
 
             {/* Hero Section — "Enquiry" heading with breadcrumb */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
-                <Image
-                    src="/gallery/fullview.png"
-                    alt="Azura Contact"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <div className="relative w-full h-full">
+                    <video
+                        src="/gallery/contact/bg-video.mp4"
+                        autoPlay
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
                     <motion.p
@@ -191,7 +193,7 @@ export default function Contact() {
                             className="w-full lg:w-[48%] h-[400px] lg:h-auto lg:min-h-[600px] relative overflow-hidden flex-shrink-0"
                         >
                             <Image
-                                src="/gallery/interior.jpg"
+                                src="/gallery/contact/aframe.webp"
                                 alt="Unwind at Azura"
                                 fill
                                 className="object-cover"

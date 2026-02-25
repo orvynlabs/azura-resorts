@@ -15,26 +15,66 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
     {
-        title: "WATER VIEW INFINITY",
-        description: "Inspired by the tranquil waters of the Padinjarathara reservoir, our view blends seamlessly into the natural surroundings, offering uninterrupted panoramas of the serene landscape. Designed to mirror the lake's charm, it creates the illusion of floating in nature itself — an unforgettable experience at Wayanad's finest luxury escape.",
-        image: "/gallery/fullview.png",
+        title: "A-FRAME LAKE VIEW STAY",
+        description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the luxury of a private balcony that offers an uninterrupted view of the lake, blending modern comfort with the rustic charm of the forest.",
+        image: "/gallery/experiences/a-frame.webp",
     },
     {
-        title: "THE DINING PAVILION",
-        description: "When on holiday, guests seek to immerse themselves in nature's beauty and savor authentic, earthy meals. Azura's dining pavilion fulfills this by serving dishes made from the finest regional ingredients, rich in local flavors. Our expert chef and team delight foodie travelers with a diverse menu featuring both Indian and global delicacies, ensuring a memorable dining experience.",
-        image: "/gallery/dining.jpg",
+        title: "LAKE VIEW DINING",
+        description: "Experience the magic of a meal overlooking the vast Karappuzha reservoir. Our dining area is positioned to provide breathtaking water views, where the cool breeze and the sound of ripples create the perfect backdrop for a romantic dinner or a peaceful breakfast.",
+        image: "/gallery/experiences/dining.webp",
         reverse: true,
     },
     {
-        title: "PREMIUM ACCOMMODATIONS",
-        description: "Experience luxury redefined — where the comforts of a world-class retreat meet the breathtaking beauty of nature. Our signature A-frame cottages and premium rooms, nested among tall trees, offer unmatched elegance. From premium amenities to personalized service, every detail is thoughtfully crafted to elevate your stay.",
-        image: "/gallery/room.jpg",
+        title: "PREMIUM LAKESIDE ROOMS",
+        description: "Designed for ultimate relaxation, our rooms feature expansive glass walls that frame the stunning landscape. With plush bedding, modern amenities, and a layout that maximizes natural light, every room serves as a private sanctuary nestled in the heart of Wayanad.",
+        image: "/gallery/experiences/room3.webp",
     },
     {
-        title: "RECREATION & ACTIVITIES",
-        description: "From cozy campfires under the stars to engaging indoor games like carroms and darts, Azura offers a variety of ways to unwind and connect. Whether you seek the thrill of a game or the warmth of a fire, our recreational spaces are designed for joy and relaxation.",
-        image: "/gallery/campfire.jpg",
+        title: "KIDS & FAMILY POOL",
+        description: "Beyond the infinity edge, we offer a dedicated swimming area perfect for families. Safe, clean, and surrounded by greenery, it’s a great spot for a relaxed morning dip or fun splashes with the kids.",
+        image: "/gallery/experiences/pool.webp",
         reverse: true,
+    },
+    {
+        title: "ELEGANT INTERIORS",
+        description: "Step into a world of refined aesthetics. Our interiors feature warm wooden textures, glassmorphism accents, and cozy lighting designed to create a soothing atmosphere that complements the natural beauty visible through our expansive glass walls.",
+        image: "/gallery/experiences/interior.webp",
+    },
+    {
+        title: "HOMELY TRADITIONAL CUISINE",
+        description: "Savor the authentic soul of Kerala with our 'homely' food experience. We specialize in traditional Malabar flavors, prepared with locally sourced spices and farm-fresh ingredients. It’s not just a meal; it’s a taste of Wayanad’s heritage served with love.",
+        image: "/gallery/experiences/traditional-food.webp",
+        reverse: true,
+    },
+    {
+        title: "LIVE LAKE FISH DINING",
+        description: "From the water to your plate—experience the ultimate freshness with our live lake fish specialty. Pick your catch and watch as our chefs transform it into a flavorful delicacy using traditional clay pot cooking or spicy Tawa grills.",
+        image: "/gallery/experiences/live-fish.webp",
+
+    },
+    {
+        title: "INDOOR GAMES & CARROMS",
+        description: "For those moments of friendly competition, head to our recreation zone. Enjoy a classic game of Carroms, Darts, or Board Games—perfect for rainy afternoons or winding down after a day of trekking.",
+        image: "/gallery/experiences/chess.webp",
+        reverse: true,
+    },
+    {
+        title: "PRIVATE FISHING POINT",
+        description: "Find your calm at our dedicated lakeside fishing point. Whether you are a seasoned angler or a beginner, the serene banks of the reservoir offer a peaceful spot to cast a line and enjoy the quiet rhythm of the water.",
+        image: "/gallery/experiences/fishing.webp",
+
+    },
+    {
+        title: "GRILLING & BBQ FACILITIES",
+        description: "Ignite your evenings with our outdoor grilling setups. Perfect for families and groups, our BBQ facility allows you to enjoy a lakeside cookout under the open sky, featuring marinated treats grilled to perfection.",
+        image: "/gallery/experiences/bbq.webp",
+        reverse: true,
+    },
+    {
+        title: "CAMPFIRE & MUSICAL NIGHTS",
+        description: "As the sun sets, the magic begins. Gather around a crackling campfire for an evening of music, laughter, and storytelling. It’s the perfect way to unwind and enjoy the rhythmic sounds of the night.",
+        image: "/gallery/experiences/campfire.webp",
     },
 ];
 
@@ -45,13 +85,15 @@ export default function Experiences() {
 
             {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
-                <Image
-                    src="/gallery/fullproperty.jpg"
-                    alt="Azura Experiences"
-                    fill
-                    className="object-cover"
-                    priority
-                />
+                <div className="relative w-full h-full">
+                    <video
+                        src="/gallery/experiences/bg-video.mp4"
+                        autoPlay
+                        muted
+                        playsInline
+                        className="absolute inset-0 w-full h-full object-cover"
+                    />
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
                     <motion.p
@@ -97,7 +139,7 @@ export default function Experiences() {
             </div>
 
             {/* Introduction */}
-            <section className="py-28 md:py-36 px-6">
+            <section className="py-16 md:py-20 px-6">
                 <div className="max-w-[900px] mx-auto text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -128,7 +170,7 @@ export default function Experiences() {
             </section>
 
             {/* Experience Cards */}
-            <section className="pb-28 md:pb-36 space-y-24 md:space-y-32">
+            <section className="pb-16 md:pb-20 space-y-16 md:space-y-20">
                 {experiences.map((item, index) => (
                     <motion.div
                         key={index}
@@ -143,7 +185,7 @@ export default function Experiences() {
                             className={`
                                 relative 
                                 w-full lg:w-[62%] 
-                                h-[320px] md:h-[420px] lg:h-[520px] 
+                                h-[260px] md:h-[340px] lg:h-[420px] 
                                 overflow-hidden
                                 ${item.reverse ? 'lg:ml-auto' : 'lg:mr-auto'}
                             `}
@@ -180,7 +222,7 @@ export default function Experiences() {
                                 mt-[-2rem] lg:mt-0
                                 bg-white
                                 rounded-[1rem]
-                                p-8 md:p-10 lg:p-14
+                                p-6 md:p-8 lg:p-10
                                 shadow-[0_4px_40px_rgba(0,0,0,0.08)]
                                 z-20
                             `}
