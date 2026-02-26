@@ -44,7 +44,6 @@ export default function About() {
         <main className="min-h-screen bg-[#f8f5ef] text-black">
             <Navbar />
 
-            {/* Hero Section */}
             <div className="relative h-[70vh] w-full overflow-hidden">
                 <div className="relative w-full h-full">
                     <video
@@ -85,7 +84,6 @@ export default function About() {
                 </div>
             </div>
 
-            {/* Intro Section */}
             <section className="py-24 px-6">
                 <div className="max-w-4xl mx-auto text-center">
                     <motion.div
