@@ -25,7 +25,7 @@ export default function WhatsAppButton() {
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ duration: 0.3 }}
-                    href="https://wa.me/919778413702?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Azura%20Resort"
+                    href="https://wa.me/918606008826?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Azura%20Resort"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Chat on WhatsApp"

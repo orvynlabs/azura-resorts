@@ -73,8 +73,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   <Link
                     href={item.href}
                     className={`text-[13px] font-montserrat tracking-[0.35em] font-light transition-colors duration-300 ${isActive
-                        ? "text-[#C1A87D]"
-                        : "text-white/80 hover:text-[#C1A87D]"
+                      ? "text-[#C1A87D]"
+                      : "text-white/80 hover:text-[#C1A87D]"
                       }`}
                     onClick={onClose}
                   >
@@ -89,17 +89,17 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
 
           {/* Contact Info */}
           <div className="flex flex-col items-center space-y-4 mb-8 text-[12px] font-montserrat font-light">
-            <a href="tel:18008913090" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
+            <a href="tel:+919072190088" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
               <Phone size={14} className="text-[#C1A87D]" />
-              <span>1800 891 3090</span>
+              <span>+91 90721 90088</span>
             </a>
-            <a href="https://wa.me/919778413702" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
+            <a href="https://wa.me/918606008826" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
               <MessageCircle size={14} className="text-[#C1A87D]" />
-              <span>+91 97784 13702</span>
+              <span>WA: 8606008826</span>
             </a>
-            <a href="mailto:reservations@azuraresort.in" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
+            <a href="mailto:azurawayanad@gmail.com" className="flex items-center space-x-2 text-white/50 hover:text-[#C1A87D] transition-colors">
               <Mail size={14} className="text-[#C1A87D]" />
-              <span>reservations@azuraresort.in</span>
+              <span>azurawayanad@gmail.com</span>
             </a>
           </div>
         </motion.div>

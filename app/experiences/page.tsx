@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { Tent, Wind, Coffee, Waves, Utensils, Fish, Music, Flame, Target, Sparkles } from "lucide-react";
 
 interface ExperienceItem {
     title: string;
@@ -16,66 +17,52 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
     {
         title: "A-FRAME LAKE VIEW STAY",
-        description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the luxury of a private balcony that offers an uninterrupted view of the lake, blending modern comfort with the rustic charm of the forest.",
+        description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the luxury of a private balcony that offers an uninterrupted view of the lake.",
         image: "/gallery/experiences/a-frame.webp",
+        reverse: false
+    },
+    {
+        title: "LAKE VIEW TENT STAY",
+        description: "Experience the thrill of the wild with the security of a resort. Our lake-facing A-frame tents are fully rain-safe and forest-integrated, featuring premium bedding, cooling fans, and private deck access to watch the reservoir ripples under the stars.",
+        image: "/gallery/experiences/tentstay.webp",
+        reverse: true
     },
     {
         title: "LAKE VIEW DINING",
-        description: "Experience the magic of a meal overlooking the vast Karappuzha reservoir. Our dining area is positioned to provide breathtaking water views, where the cool breeze and the sound of ripples create the perfect backdrop for a romantic dinner or a peaceful breakfast.",
+        description: "Experience the magic of a meal overlooking the vast Karappuzha reservoir. Our dining area is positioned to provide breathtaking water views where the cool breeze creates the perfect backdrop.",
         image: "/gallery/experiences/dining.webp",
-        reverse: true,
-    },
-    {
-        title: "PREMIUM LAKESIDE ROOMS",
-        description: "Designed for ultimate relaxation, our rooms feature expansive glass walls that frame the stunning landscape. With plush bedding, modern amenities, and a layout that maximizes natural light, every room serves as a private sanctuary nestled in the heart of Wayanad.",
-        image: "/gallery/experiences/room3.webp",
+        reverse: false
     },
     {
         title: "KIDS & FAMILY POOL",
-        description: "Beyond the infinity edge, we offer a dedicated swimming area perfect for families. Safe, clean, and surrounded by greenery, it’s a great spot for a relaxed morning dip or fun splashes with the kids.",
+        description: "Beyond the infinity edge, we offer a dedicated swimming area perfect for families. Safe, clean, and surrounded by greenery, it’s a great spot for fun splashes with the kids.",
         image: "/gallery/experiences/pool.webp",
-        reverse: true,
-    },
-    {
-        title: "ELEGANT INTERIORS",
-        description: "Step into a world of refined aesthetics. Our interiors feature warm wooden textures, glassmorphism accents, and cozy lighting designed to create a soothing atmosphere that complements the natural beauty visible through our expansive glass walls.",
-        image: "/gallery/experiences/interior.webp",
+        reverse: true
     },
     {
         title: "HOMELY TRADITIONAL CUISINE",
-        description: "Savor the authentic soul of Kerala with our 'homely' food experience. We specialize in traditional Malabar flavors, prepared with locally sourced spices and farm-fresh ingredients. It’s not just a meal; it’s a taste of Wayanad’s heritage served with love.",
+        description: "Savor the authentic soul of Kerala with our 'homely' food experience. We specialize in traditional Malabar flavors, prepared with locally sourced spices and farm-fresh ingredients.",
         image: "/gallery/experiences/traditional-food.webp",
-        reverse: true,
+        reverse: false
     },
     {
         title: "LIVE LAKE FISH DINING",
-        description: "From the water to your plate—experience the ultimate freshness with our live lake fish specialty. Pick your catch and watch as our chefs transform it into a flavorful delicacy using traditional clay pot cooking or spicy Tawa grills.",
+        description: "From the water to your plate—experience the ultimate freshness with our live lake fish specialty. Pick your catch and watch as our chefs transform it into a flavorful delicacy.",
         image: "/gallery/experiences/live-fish.webp",
-
-    },
-    {
-        title: "INDOOR GAMES & CARROMS",
-        description: "For those moments of friendly competition, head to our recreation zone. Enjoy a classic game of Carroms, Darts, or Board Games—perfect for rainy afternoons or winding down after a day of trekking.",
-        image: "/gallery/experiences/chess.webp",
-        reverse: true,
+        reverse: true
     },
     {
         title: "PRIVATE FISHING POINT",
-        description: "Find your calm at our dedicated lakeside fishing point. Whether you are a seasoned angler or a beginner, the serene banks of the reservoir offer a peaceful spot to cast a line and enjoy the quiet rhythm of the water.",
+        description: "Find your calm at our dedicated lakeside fishing point. Whether you are a seasoned angler or a beginner, the serene banks offer a peaceful spot to cast a line and enjoy the quiet rhythm of the water.",
         image: "/gallery/experiences/fishing.webp",
-
-    },
-    {
-        title: "GRILLING & BBQ FACILITIES",
-        description: "Ignite your evenings with our outdoor grilling setups. Perfect for families and groups, our BBQ facility allows you to enjoy a lakeside cookout under the open sky, featuring marinated treats grilled to perfection.",
-        image: "/gallery/experiences/bbq.webp",
-        reverse: true,
+        reverse: false
     },
     {
         title: "CAMPFIRE & MUSICAL NIGHTS",
-        description: "As the sun sets, the magic begins. Gather around a crackling campfire for an evening of music, laughter, and storytelling. It’s the perfect way to unwind and enjoy the rhythmic sounds of the night.",
+        description: "As the sun sets, the magic begins. Gather around a crackling campfire for an evening of music, laughter, and storytelling. It’s the perfect way to unwind under the stars.",
         image: "/gallery/experiences/campfire.webp",
-    },
+        reverse: true
+    }
 ];
 
 export default function Experiences() {

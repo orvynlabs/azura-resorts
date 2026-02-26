@@ -274,7 +274,7 @@ export default function PlacesToVisit() {
             {/* Map / CTA Section */}
             <section className="relative py-28 overflow-hidden">
                 <Image
-                    src="/gallery/fullview.png"
+                    src="/gallery/gallery/fullview.png"
                     alt="Wayanad Panorama"
                     fill
                     className="object-cover"

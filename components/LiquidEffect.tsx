@@ -46,8 +46,10 @@ export default function LiquidEffect() {
         const dpr = 1; // Use 1x DPR for performance — ripples don't need retina
 
         const resize = () => {
-            const w = window.innerWidth;
-            const h = window.innerHeight;
+            const parent = canvas.parentElement;
+            if (!parent) return;
+            const w = parent.clientWidth;
+            const h = parent.clientHeight;
             canvas.width = w * dpr;
             canvas.height = h * dpr;
             canvas.style.width = w + "px";
@@ -64,8 +66,13 @@ export default function LiquidEffect() {
             const now = performance.now();
             if (now - lastMouseTime < 16) return; // ~60fps throttle
             lastMouseTime = now;
+            const rect = canvas.getBoundingClientRect();
+            if (e.clientX < rect.left || e.clientX > rect.right || e.clientY < rect.top || e.clientY > rect.bottom) {
+                mouseRef.current.active = false;
+                return;
+            }
             prevMouseRef.current = { ...mouseRef.current };
-            mouseRef.current = { x: e.clientX, y: e.clientY, active: true };
+            mouseRef.current = { x: e.clientX - rect.left, y: e.clientY - rect.top, active: true };
         };
 
         const onTouchMove = (e: TouchEvent) => {
@@ -73,10 +80,17 @@ export default function LiquidEffect() {
                 const now = performance.now();
                 if (now - lastMouseTime < 16) return;
                 lastMouseTime = now;
+                const rect = canvas.getBoundingClientRect();
+                const touchX = e.touches[0].clientX;
+                const touchY = e.touches[0].clientY;
+                if (touchX < rect.left || touchX > rect.right || touchY < rect.top || touchY > rect.bottom) {
+                    mouseRef.current.active = false;
+                    return;
+                }
                 prevMouseRef.current = { ...mouseRef.current };
                 mouseRef.current = {
-                    x: e.touches[0].clientX,
-                    y: e.touches[0].clientY,
+                    x: touchX - rect.left,
+                    y: touchY - rect.top,
                     active: true,
                 };
             }
@@ -175,8 +189,10 @@ export default function LiquidEffect() {
             const now = performance.now();
             if (now - lastAmbientDrop > AMBIENT_INTERVAL) {
                 lastAmbientDrop = now;
-                const rx = Math.random() * window.innerWidth;
-                const ry = Math.random() * window.innerHeight;
+                const canvasW = canvas.width;
+                const canvasH = canvas.height;
+                const rx = Math.random() * canvasW;
+                const ry = Math.random() * canvasH;
                 dropRipple(rx, ry, 20 + Math.random() * 15, 4 + Math.random() * 4);
                 hasActivity = true;
             }
@@ -203,7 +219,7 @@ export default function LiquidEffect() {
             if (!hasActivity && maxAmplitude < 0.5) {
                 idleFrames++;
                 if (idleFrames > 5) {
-                    ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
                     return;
                 }
             } else {
@@ -211,8 +227,8 @@ export default function LiquidEffect() {
             }
 
             // Render to canvas
-            const canvasW = window.innerWidth;
-            const canvasH = window.innerHeight;
+            const canvasW = canvas.width;
+            const canvasH = canvas.height;
 
             ctx.clearRect(0, 0, canvasW, canvasH);
 
@@ -273,13 +289,13 @@ export default function LiquidEffect() {
         <canvas
             ref={canvasRef}
             style={{
-                position: "fixed",
+                position: "absolute",
                 top: 0,
                 left: 0,
                 width: "100%",
                 height: "100%",
                 pointerEvents: "none",
-                zIndex: 9999,
+                zIndex: 20,
                 opacity: 1,
                 transition: "opacity 0.5s ease",
             }}

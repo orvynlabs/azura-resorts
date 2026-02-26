@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Instagram, Mail, Phone, MapPin, Facebook, Youtube, Globe } from "lucide-react";
+import { Instagram, Mail, Phone, MapPin, Facebook, Youtube, Globe, Star } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -28,7 +28,7 @@ export default function Footer() {
                             The Water View Resort
                         </p>
                         <p className="font-montserrat text-white/40 text-[13px] leading-[2] max-w-sm font-light">
-                            Where Water Meets Tranquility. Experience the perfect blend of luxury and nature at our exclusive water-view resort in the heart of Wayanad.
+                            Where Water Meets Tranquility. Experience a fully private, nature-friendly escape overlooking the serene Padinjarathara reservoir in the heart of Meppadi, Wayanad.
                         </p>
                     </div>
 
@@ -52,17 +52,25 @@ export default function Footer() {
                             <li className="flex items-center gap-3">
                                 <Phone size={13} className="text-[#C1A87D]/60 shrink-0" />
                                 <div>
-                                    <span className="block">1800 891 3090</span>
-                                    <span className="block text-white/25">+91 9778413702</span>
+                                    <a href="tel:+919072190088" className="block hover:text-[#C1A87D] transition-colors">+91 90721 90088</a>
+                                    <a href="tel:+918943132890" className="block text-white/40 hover:text-[#C1A87D] transition-colors">+91 89431 32890</a>
+                                    <a href="https://wa.me/918606008826" className="block text-white/40 hover:text-[#C1A87D] transition-colors mt-0.5">WA: 8606008826</a>
                                 </div>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={13} className="text-[#C1A87D]/60 shrink-0" />
-                                <span>reservations@azuraresort.in</span>
+                                <a href="mailto:azurawayanad@gmail.com" className="hover:text-[#C1A87D] transition-colors">azurawayanad@gmail.com</a>
                             </li>
                             <li className="flex items-start gap-3">
                                 <MapPin size={13} className="mt-1 text-[#C1A87D]/60 shrink-0" />
-                                <span>Azura Resort, Padinjarathara, <br />Wayanad, Kerala, 673575, India</span>
+                                <a
+                                    href="https://maps.google.com?q=Azura%20The%20Water%20View%20Resort%20Wayanad,%20Puttad%20Road,%20Meppadi,%20Kerala&ftid=0x3ba60f001b268f6f:0xc8939fc1c33a78a9&entry=gps&shh=CAE&lucs=,94259551,94297699,94284472,94231188,94280568,47071704,94218641,94282134,94286869&g_st=ic"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="hover:text-[#C1A87D] transition-colors"
+                                >
+                                    Azura Resort, Puttad , <br />Meppadi, Wayanad, Kerala, 673577, India
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -72,14 +80,17 @@ export default function Footer() {
                         <h3 className="font-montserrat text-[10px] mb-8 text-[#C1A87D] tracking-[0.3em] uppercase font-medium">Follow Us</h3>
                         <div className="flex gap-3">
                             {[
-                                { icon: <Instagram size={16} />, label: "Instagram" },
-                                { icon: <Facebook size={16} />, label: "Facebook" },
-                                { icon: <Youtube size={16} />, label: "YouTube" },
-                                { icon: <Globe size={16} />, label: "Website" },
+                                { icon: <Instagram size={16} />, label: "Instagram", href: "https://www.instagram.com/azuraresorts_wynd?igsh=MXN4djNveDZuMDNsNQ%3D%3D&utm_source=qr" },
+                                { icon: <Facebook size={16} />, label: "Facebook", href: "https://www.facebook.com/share/17zdxPd3Qs/?mibextid=wwXIfr" },
+                                { icon: <Youtube size={16} />, label: "YouTube", href: "https://youtube.com/@azurawayanad?si=6V1TxB4n7znOtWCN" },
+                                { icon: <Star size={16} />, label: "Google Reviews", href: "https://g.page/r/Cal4OsPBn5PIEAE/review" },
+                                { icon: <Globe size={16} />, label: "Website", href: "https://www.azurawayanad.in/" },
                             ].map((social) => (
                                 <Link
                                     key={social.label}
-                                    href="#"
+                                    href={social.href || "#"}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-10 h-10 flex items-center justify-center text-white/30 border border-white/10 hover:bg-[#C1A87D] hover:text-white hover:border-[#C1A87D] transition-all duration-300"
                                     aria-label={social.label}
                                 >
@@ -88,7 +99,7 @@ export default function Footer() {
                             ))}
                         </div>
                         <p className="font-montserrat text-white/25 text-[12px] mt-8 leading-[1.8] font-light">
-                            Stay connected for exclusive offers, seasonal packages, and behind-the-scenes glimpses into life at Azura.
+                            Join us for a private retreat featuring signature A-frame stays and panoramic lake views.
                         </p>
                     </div>
                 </div>

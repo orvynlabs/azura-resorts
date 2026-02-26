@@ -15,7 +15,7 @@ export default function Gallery() {
             {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden flex items-center justify-center">
                 <Image
-                    src="/gallery/fullview.png"
+                    src="/gallery/gallery/fullview.png"
                     alt="Gallery - Azura Resort"
                     fill
                     className="object-cover"

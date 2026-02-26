@@ -12,12 +12,13 @@ export default function Contact() {
         <main className="min-h-screen bg-[#f8f5ef]">
             <Navbar />
 
-            {/* Hero Section — "Enquiry" heading with breadcrumb */}
+            {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden">
                 <div className="relative w-full h-full">
                     <video
                         src="/gallery/contact/bg-video.mp4"
                         autoPlay
+                        loop
                         muted
                         playsInline
                         className="absolute inset-0 w-full h-full object-cover"
@@ -67,7 +68,7 @@ export default function Contact() {
                 </div>
             </div>
 
-            {/* Intro Section — "Reach a Hidden World of Tranquility" */}
+            {/* Intro Section */}
             <section className="py-28 md:py-36 px-6">
                 <div className="max-w-[1080px] mx-auto text-center">
                     <motion.div
@@ -83,7 +84,6 @@ export default function Contact() {
                             Reach a Hidden World of Tranquility
                         </h2>
 
-                        {/* Decorative Gold Divider */}
                         <div className="flex items-center justify-center gap-3 mb-10">
                             <div className="h-[1px] w-20 bg-[#C1A87D]" />
                             <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
@@ -91,11 +91,11 @@ export default function Contact() {
                         </div>
 
                         <p className="font-montserrat text-[#5a5a5a] text-[13px] md:text-[15px] leading-[2.1] font-light max-w-[900px] mx-auto mb-20">
-                            Tucked deep within the forests of Wayanad, Azura is a secluded paradise located on a serene peninsula overlooking the Padinjarathara reservoir. The journey to this breathtaking destination involves a peaceful drive along a scenic road, revealing glimpses of untouched wilderness. Upon arrival, guests are greeted by a panoramic view of the tranquil lake and dense forest.
+                            Located in the serene surroundings of Puttad, Meppadi, Azura is a peaceful lake-view retreat designed for families and small groups seeking privacy, comfort, and scenic beauty. Tucked away from the noise, our 20-cent property offers a fully private stay model where your group can enjoy the 180° water views in complete seclusion.
                         </p>
                     </motion.div>
 
-                    {/* Contact Info Cards — 3 columns */}
+                    {/* Contact Info Cards */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
                         {/* Phone */}
                         <motion.div
@@ -108,9 +108,10 @@ export default function Contact() {
                             <div className="w-14 h-14 flex items-center justify-center border border-[#C1A87D]/30 mb-6">
                                 <Phone size={20} className="text-[#C1A87D]" />
                             </div>
-                            <p className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light">
-                                1800 891 3090 <br />
-                                +91 9778413702
+                            <p className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light text-center">
+                                <a href="tel:+919072190088" className="hover:text-[#C1A87D] transition-colors">+91 90721 90088</a> <br />
+                                <a href="tel:+918943132890" className="hover:text-[#C1A87D] transition-colors">+91 89431 32890</a> <br />
+                                <a href="https://wa.me/918606008826" className="hover:text-[#C1A87D] transition-colors">WA: 8606008826</a>
                             </p>
                         </motion.div>
 
@@ -125,11 +126,16 @@ export default function Contact() {
                             <div className="w-14 h-14 flex items-center justify-center border border-[#C1A87D]/30 mb-6">
                                 <MapPin size={20} className="text-[#C1A87D]" />
                             </div>
-                            <p className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light">
-                                Azura Resort, <br />
-                                Padinjarathara, Wayanad, <br />
-                                Kerala, 673575, India.
-                            </p>
+                            <a
+                                href="https://maps.google.com?q=Azura%20The%20Water%20View%20Resort%20Wayanad,%20Puttad%20Road,%20Meppadi,%20Kerala&ftid=0x3ba60f001b268f6f:0xc8939fc1c33a78a9&entry=gps&shh=CAE&lucs=,94259551,94297699,94284472,94231188,94280568,47071704,94218641,94282134,94286869&g_st=ic"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light text-center hover:text-[#C1A87D] transition-colors"
+                            >
+                                Azura – The Water View Resort, <br />
+                                Puttad , Meppadi, Wayanad, <br />
+                                Kerala, 673577, India.
+                            </a>
                         </motion.div>
 
                         {/* Email */}
@@ -143,38 +149,36 @@ export default function Contact() {
                             <div className="w-14 h-14 flex items-center justify-center border border-[#C1A87D]/30 mb-6">
                                 <Mail size={20} className="text-[#C1A87D]" />
                             </div>
-                            <p className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light">
-                                reservations@azuraresort.in
-                            </p>
+                            <a href="mailto:azurawayanad@gmail.com" className="font-montserrat text-[13px] text-[#1a1a1a] leading-[2] font-light text-center hover:text-[#C1A87D] transition-colors block">
+                                azurawayanad@gmail.com
+                            </a>
                         </motion.div>
                     </div>
                 </div>
             </section>
 
             {/* Location Map Section */}
-            <section className="relative h-[400px] md:h-[500px] w-full overflow-hidden">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3905.4!2d76.05!3d11.65!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60f6e!2sWayanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+            <section className="relative h-[500px] md:h-[600px] w-full overflow-hidden">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1643.3206506158174!2d76.17773378848517!3d11.58785682196572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba60f001b268f6f%3A0xc8939fc1c33a78a9!2sAzura%20The%20Water%20View%20Resort%20Wayanad!5e0!3m2!1sen!2sin!4v1772116807637!5m2!1sen!2sin"
                     width="100%"
                     height="100%"
-                    style={{ border: 0, filter: "grayscale(0.3) contrast(1.1)" }}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
                     title="Azura Resort Location"
                     className="w-full h-full"
                 />
-                {/* Overlay with location button */}
-                <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#f8f5ef] to-transparent pointer-events-none" />
+
+                {/* Floating Action Button for Navigation */}
                 <div className="absolute top-6 right-6 z-10">
                     <a
-                        href="https://maps.google.com/?q=Padinjarathara,+Wayanad,+Kerala"
+                        href="https://maps.google.com?q=Azura%20The%20Water%20View%20Resort%20Wayanad,%20Puttad%20Road,%20Meppadi,%20Kerala&ftid=0x3ba60f001b268f6f:0xc8939fc1c33a78a9&entry=gps&shh=CAE&lucs=,94259551,94297699,94284472,94231188,94280568,47071704,94218641,94282134,94286869&g_st=ic"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 font-montserrat bg-white/90 backdrop-blur-sm text-[#1a1a1a] px-6 py-3 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#C1A87D] hover:text-white transition-all duration-300 shadow-lg"
+                        className="flex items-center gap-2 bg-white/95 backdrop-blur-md text-[#1a1a1a] px-6 py-3 uppercase tracking-[0.2em] text-[10px] font-semibold hover:bg-[#7a6af6] hover:text-white transition-all duration-300 shadow-2xl rounded-sm"
                     >
                         <MapPin size={14} />
-                        Open in Maps
+                        Navigate to Resort
                         <ExternalLink size={12} className="opacity-60" />
                     </a>
                 </div>
@@ -194,7 +198,7 @@ export default function Contact() {
                         >
                             <Image
                                 src="/gallery/contact/aframe.webp"
-                                alt="Unwind at Azura"
+                                alt="A-frame Stay at Azura"
                                 fill
                                 className="object-cover"
                             />
@@ -216,7 +220,6 @@ export default function Contact() {
                                 Unwind Starts With a Message
                             </h2>
 
-                            {/* Decorative Divider */}
                             <div className="flex items-center gap-3 mb-12">
                                 <div className="h-[1px] w-14 bg-[#C1A87D]" />
                                 <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
@@ -266,7 +269,7 @@ export default function Contact() {
                                     <label className="font-montserrat text-[10px] uppercase tracking-[0.2em] text-[#5a5a5a]">Message</label>
                                     <textarea
                                         rows={4}
-                                        placeholder="Tell us about your stay preferences..."
+                                        placeholder="Tell us about your stay preferences (Group size, Dates, BBQ/Campfire requests)..."
                                         className="w-full border-b border-[#1a1a1a]/15 py-3 focus:outline-none focus:border-[#C1A87D] transition-colors bg-transparent resize-none font-montserrat text-[13px] text-[#1a1a1a] placeholder:text-[#1a1a1a]/25"
                                     />
                                 </div>

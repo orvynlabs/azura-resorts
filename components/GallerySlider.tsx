@@ -16,33 +16,33 @@ const categories = ["All", "Location", "Villas", "Facilities", "Activities", "Cu
 
 const galleryImages: GalleryImage[] = [
     // Location
-    { src: "/gallery/fullview.png", category: "Location", alt: "Panoramic view of Azura Resort on the reservoir", span: "col-span-2 row-span-2" },
-    { src: "/gallery/fullproperty.jpg", category: "Location", alt: "Full property aerial view of Azura" },
-    { src: "/gallery/swing (2).jpg", category: "Location", alt: "Scenic landscape around Azura Resort" },
-    { src: "/gallery/IMG_20241130_183317_312.jpg", category: "Location", alt: "Misty morning at the reservoir" },
-    { src: "/gallery/IMG_20241130_183406_380.webp", category: "Location", alt: "Aerial view of the island resort" },
+    { src: "/gallery/gallery/fullview.png", category: "Location", alt: "Panoramic view of Azura Resort on the reservoir", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/fullview.png", category: "Location", alt: "Full property aerial view of Azura" },
+    { src: "/gallery/gallery/swing (2).jpg", category: "Location", alt: "Scenic landscape around Azura Resort" },
+    { src: "/gallery/gallery/swing (2).jpg", category: "Location", alt: "Misty morning at the reservoir" },
+    { src: "/gallery/gallery/aframe.webp", category: "Location", alt: "Aerial view of the island resort" },
 
     // Villas
-    { src: "/gallery/aframe.jpg", category: "Villas", alt: "Premium A-Frame cottage", span: "col-span-2 row-span-2" },
-    { src: "/gallery/room.jpg", category: "Villas", alt: "Luxury room interior" },
-    { src: "/gallery/interior.jpg", category: "Villas", alt: "Cottage interior with modern amenities" },
-    { src: "/gallery/aframe (2).jpg", category: "Villas", alt: "A-Frame cottage exterior view" },
-    { src: "/gallery/aframe (3).jpg", category: "Villas", alt: "A-Frame cottage nestled in forest" },
-    { src: "/gallery/room (2).jpg", category: "Villas", alt: "Deluxe room interior" },
+    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "Premium A-Frame cottage", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/room.jpg", category: "Villas", alt: "Luxury room interior" },
+    { src: "/gallery/gallery/interior.jpg", category: "Villas", alt: "Cottage interior with modern amenities" },
+    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "A-Frame cottage exterior view" },
+    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "A-Frame cottage nestled in forest" },
+    { src: "/gallery/gallery/room (3).jpg", category: "Villas", alt: "Deluxe room interior" },
 
     // Facilities
-    { src: "/gallery/pool.jpeg", category: "Facilities", alt: "Infinity pool overlooking the lake" },
-    { src: "/gallery/dartboard.jpg", category: "Facilities", alt: "Indoor games - Dartboard" },
-    { src: "/gallery/carroms.jpg", category: "Facilities", alt: "Indoor games - Carrom board" },
-    { src: "/gallery/chess (2).jpg", category: "Facilities", alt: "Indoor games - Chess" },
-    { src: "/gallery/swing.jpg", category: "Facilities", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/pool.jpeg", category: "Facilities", alt: "Infinity pool overlooking the lake" },
+    { src: "/gallery/gallery/dartboard.jpg", category: "Facilities", alt: "Indoor games - Dartboard" },
+    { src: "/gallery/gallery/carroms.jpg", category: "Facilities", alt: "Indoor games - Carrom board" },
+    { src: "/gallery/gallery/chess (2).jpg", category: "Facilities", alt: "Indoor games - Chess" },
+    { src: "/gallery/gallery/swing (2).jpg", category: "Facilities", alt: "Lakeside swing" },
 
     // Activities
-    { src: "/gallery/campfire.jpg", category: "Activities", alt: "Evening campfire under the stars", span: "col-span-2 row-span-2" },
+    { src: "/gallery/experiences/campfire.webp", category: "Activities", alt: "Evening campfire under the stars", span: "col-span-2 row-span-2" },
 
     // Culinary
-    { src: "/gallery/dining.jpg", category: "Culinary", alt: "Outdoor dining pavilion", span: "col-span-2 row-span-2" },
-    { src: "/gallery/dining (3).jpg", category: "Culinary", alt: "Authentic Kerala cuisine" },
+    { src: "/gallery/gallery/dining.jpg", category: "Culinary", alt: "Outdoor dining pavilion", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/dining.jpg", category: "Culinary", alt: "Authentic Kerala cuisine" },
 ];
 
 export default function GallerySlider() {
