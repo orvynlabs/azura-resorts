@@ -13,6 +13,7 @@
   --font-montserrat: var(--font-montserrat);
   --font-bricolage-grotesque: var(--font-bricolage-grotesque);
   --font-playfair-display: var(--font-playfair-display);
+  --font-cormorant: var(--font-cormorant-garamond);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -137,7 +138,7 @@ html {
 
 /* Custom selection color */
 ::selection {
-  background-color: rgba(193, 168, 125, 0.3);
+  background-color: rgba(76, 100, 84, 0.3);
   color: #1a1a1a;
 }
 
@@ -151,12 +152,12 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C1A87D;
+  background: #4C6454;
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a89268;
+  background: #4C6454;
 }
 
 /* Page entrance animation */
@@ -183,7 +184,7 @@ img {
 
 /* Focus visible for accessibility */
 :focus-visible {
-  outline: 2px solid #C1A87D;
+  outline: 2px solid #4C6454;
   outline-offset: 2px;
 }
 

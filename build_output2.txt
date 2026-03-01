@@ -1,0 +1,71 @@
+
+> azuraresort@0.1.0 build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\ADMIN\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\package-lock.json
+
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+
+> Build error occurred
+Error: Turbopack build failed with 3 errors:
+./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:20
+Ecmascript file had an error
+[0m [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mUtensils[39m[33m,[39m [33mTreePine[39m[33m,[39m [33mWaves[39m[33m,[39m [33mFlame[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mMusic[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { useState[33m,[39m useEffect[33m,[39m useRef } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m   |[39m                    [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mHeroOverlay[39m [36mfrom[39m [32m"@/components/HeroOverlay"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mLiquidEffect[39m [36mfrom[39m [32m"@/components/LiquidEffect"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mScrollSection[39m [36mfrom[39m [32m"@/components/ScrollSection"[39m[33m;[39m[0m
+
+You're importing a component that needs `useEffect`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:31
+Ecmascript file had an error
+[0m [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mUtensils[39m[33m,[39m [33mTreePine[39m[33m,[39m [33mWaves[39m[33m,[39m [33mFlame[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mMusic[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { useState[33m,[39m useEffect[33m,[39m useRef } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m   |[39m                               [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mHeroOverlay[39m [36mfrom[39m [32m"@/components/HeroOverlay"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mLiquidEffect[39m [36mfrom[39m [32m"@/components/LiquidEffect"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mScrollSection[39m [36mfrom[39m [32m"@/components/ScrollSection"[39m[33m;[39m[0m
+
+You're importing a component that needs `useRef`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:10
+Ecmascript file had an error
+[0m [90m 3 |[39m [36mimport[39m [33mLink[39m [36mfrom[39m [32m"next/link"[39m[33m;[39m
+ [90m 4 |[39m [36mimport[39m { [33mUtensils[39m[33m,[39m [33mTreePine[39m[33m,[39m [33mWaves[39m[33m,[39m [33mFlame[39m[33m,[39m [33mMapPin[39m[33m,[39m [33mMusic[39m } [36mfrom[39m [32m"lucide-react"[39m[33m;[39m
+[31m[1m>[22m[39m[90m 5 |[39m [36mimport[39m { useState[33m,[39m useEffect[33m,[39m useRef } [36mfrom[39m [32m"react"[39m[33m;[39m
+ [90m   |[39m          [31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m[31m[1m^[22m[39m
+ [90m 6 |[39m [36mimport[39m [33mHeroOverlay[39m [36mfrom[39m [32m"@/components/HeroOverlay"[39m[33m;[39m
+ [90m 7 |[39m [36mimport[39m [33mLiquidEffect[39m [36mfrom[39m [32m"@/components/LiquidEffect"[39m[33m;[39m
+ [90m 8 |[39m [36mimport[39m [33mScrollSection[39m [36mfrom[39m [32m"@/components/ScrollSection"[39m[33m;[39m[0m
+
+You're importing a component that needs `useState`. This React Hook only works in a Client Component. To fix, mark the file (or its parent) with the `"use client"` directive.
+
+ Learn more: https://nextjs.org/docs/app/api-reference/directives/use-client
+
+
+
+
+    at <unknown> (./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:20)
+    at <unknown> (./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:31)
+    at <unknown> (./OneDrive/Desktop/Azura/azuraresort/app/page.tsx:5:10)

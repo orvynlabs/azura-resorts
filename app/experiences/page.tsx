@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Tent, Wind, Coffee, Waves, Utensils, Fish, Music, Flame, Target, Sparkles } from "lucide-react";
 
 interface ExperienceItem {
     title: string;
@@ -17,7 +16,7 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
     {
         title: "A-FRAME LAKE VIEW STAY",
-        description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the luxury of a private balcony that offers an uninterrupted view of the lake.",
+        description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the peace of a private balcony that offers an uninterrupted view of the lake.",
         image: "/gallery/experiences/a-frame.webp",
         reverse: false
     },
@@ -76,6 +75,7 @@ export default function Experiences() {
                     <video
                         src="/gallery/experiences/bg-video.mp4"
                         autoPlay
+                        loop
                         muted
                         playsInline
                         className="absolute inset-0 w-full h-full object-cover"
@@ -87,7 +87,7 @@ export default function Experiences() {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6"
+                        className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#668270] uppercase mb-6"
                     >
                         Discover
                     </motion.p>
@@ -105,9 +105,9 @@ export default function Experiences() {
                         transition={{ delay: 0.6, duration: 0.6 }}
                         className="flex items-center justify-center gap-3"
                     >
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
-                        <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
+                        <div className="h-[1px] w-16 bg-[#4C6454]" />
+                        <div className="w-2 h-2 rotate-45 border border-[#4C6454]" />
+                        <div className="h-[1px] w-16 bg-[#4C6454]" />
                     </motion.div>
                     {/* Breadcrumb */}
                     <motion.div
@@ -117,7 +117,7 @@ export default function Experiences() {
                         className="mt-8"
                     >
                         <p className="font-montserrat text-[11px] tracking-[0.2em] text-white/60">
-                            <Link href="/" className="hover:text-[#C1A87D] transition-colors">Home</Link>
+                            <Link href="/" className="hover:text-[#668270] transition-colors">Home</Link>
                             <span className="mx-3">—</span>
                             <span className="text-white/80">Experiences</span>
                         </p>
@@ -134,7 +134,7 @@ export default function Experiences() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6 font-medium">
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#668270] uppercase mb-6 font-medium">
                             Curated For You
                         </p>
                         <h2 className="font-playfair-display text-[1.6rem] md:text-[2.4rem] lg:text-[2.8rem] leading-[1.35] text-[#1a1a1a] tracking-[0.03em] mb-10">
@@ -144,9 +144,9 @@ export default function Experiences() {
 
                         {/* Decorative Gold Divider */}
                         <div className="flex items-center justify-center gap-3 mb-10">
-                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
-                            <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
-                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
+                            <div className="w-2.5 h-2.5 rotate-45 border border-[#4C6454]" />
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
                         </div>
 
                         <p className="font-montserrat text-[#5a5a5a] text-[13px] md:text-[15px] leading-[2.1] font-light max-w-[800px] mx-auto">
@@ -216,7 +216,7 @@ export default function Experiences() {
                         >
                             <div className="text-center">
                                 {/* Gold label */}
-                                <p className="font-montserrat text-[10px] tracking-[0.4em] text-[#C1A87D] uppercase mb-4 font-medium">
+                                <p className="font-montserrat text-[10px] tracking-[0.4em] text-[#668270] uppercase mb-4 font-medium">
                                     {index === 0 ? "Infinity View" : index === 1 ? "Culinary Excellence" : index === 2 ? "Accommodation" : "Leisure & Fun"}
                                 </p>
 
@@ -226,9 +226,9 @@ export default function Experiences() {
 
                                 {/* Decorative Divider */}
                                 <div className="flex items-center justify-center gap-3 mb-6">
-                                    <div className="h-[1px] w-12 bg-[#C1A87D]" />
-                                    <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
-                                    <div className="h-[1px] w-12 bg-[#C1A87D]" />
+                                    <div className="h-[1px] w-12 bg-[#4C6454]" />
+                                    <div className="w-2 h-2 rotate-45 border border-[#4C6454]" />
+                                    <div className="h-[1px] w-12 bg-[#4C6454]" />
                                 </div>
 
                                 <p className="font-montserrat text-[#5a5a5a] leading-[2] text-[13px] font-light">

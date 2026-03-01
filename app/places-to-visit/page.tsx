@@ -160,7 +160,7 @@ export default function PlacesToVisit() {
                             initial={{ width: 0 }}
                             animate={{ width: "80px" }}
                             transition={{ delay: 0.6, duration: 0.8 }}
-                            className="h-[1px] bg-[#C1A87D] mx-auto mb-6"
+                            className="h-[1px] bg-[#4C6454] mx-auto mb-6"
                         />
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -183,14 +183,14 @@ export default function PlacesToVisit() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-6 font-medium">
                             Discover Wayanad
                         </p>
-                        <h2 className="font-cinzel text-2xl md:text-4xl text-[#2C3E50] mb-8 leading-relaxed">
+                        <h2 className="font-playfair-display text-[1.8rem] md:text-[2.6rem] text-[#1a1a1a] mb-8 leading-[1.2] tracking-[0.02em]">
                             Beyond the Resort, <br />
-                            <span className="text-[#C1A87D]">A World Awaits</span>
+                            <span className="text-[#668270]">A World Awaits</span>
                         </h2>
-                        <div className="w-24 h-[1px] bg-[#C1A87D] mx-auto mb-10" />
+                        <div className="w-24 h-[1px] bg-[#4C6454] mx-auto mb-10" />
                         <p className="font-montserrat text-gray-600 leading-[2] font-light text-sm md:text-base max-w-3xl mx-auto">
                             Wayanad is a land of ancient caves, misty peaks, sacred temples, and cascading
                             waterfalls. From Azura, some of Kerala&apos;s most captivating landscapes are just a
@@ -233,7 +233,7 @@ export default function PlacesToVisit() {
 
                                     {/* Category Badge */}
                                     <div className="absolute top-6 left-6">
-                                        <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase bg-white/90 text-[#2C3E50] px-4 py-2 rounded-full font-medium backdrop-blur-sm">
+                                        <span className="font-montserrat text-[10px] tracking-[0.3em] uppercase bg-white/90 text-[#1a1a1a] px-4 py-2 rounded-full font-medium backdrop-blur-sm">
                                             {place.category}
                                         </span>
                                     </div>
@@ -241,16 +241,16 @@ export default function PlacesToVisit() {
 
                                 {/* Content */}
                                 <div className={`w-full lg:w-[45%] ${isReversed ? "lg:pr-8" : "lg:pl-8"}`}>
-                                    <p className="font-montserrat text-xs tracking-[0.3em] text-[#C1A87D] uppercase mb-4 font-medium">
+                                    <p className="font-montserrat text-xs tracking-[0.3em] text-[#668270] uppercase mb-4 font-medium">
                                         {place.subtitle}
                                     </p>
-                                    <h3 className="font-cinzel text-2xl md:text-4xl text-[#2C3E50] mb-6 tracking-wide">
+                                    <h3 className="font-playfair-display text-2xl md:text-3xl lg:text-4xl text-[#1a1a1a] mb-6 tracking-[0.02em]">
                                         {place.title}
                                     </h3>
                                     <div className="flex items-center gap-2 mb-6">
-                                        <div className="h-[1px] w-10 bg-[#C1A87D]" />
-                                        <div className="w-1.5 h-1.5 rounded-full bg-[#C1A87D]" />
-                                        <div className="h-[1px] w-10 bg-[#C1A87D]" />
+                                        <div className="h-[1px] w-10 bg-[#4C6454]" />
+                                        <div className="w-1.5 h-1.5 rounded-full bg-[#4C6454]" />
+                                        <div className="h-[1px] w-10 bg-[#4C6454]" />
                                     </div>
                                     <p className="font-montserrat text-gray-600 leading-[1.9] font-light text-sm md:text-base mb-8">
                                         {place.description}
@@ -258,7 +258,7 @@ export default function PlacesToVisit() {
 
                                     <div className="flex items-center gap-6">
                                         <div className="flex items-center gap-2 text-gray-500">
-                                            <MapPin size={16} className="text-[#C1A87D]" />
+                                            <MapPin size={16} className="text-[#668270]" />
                                             <span className="font-montserrat text-xs tracking-wider font-medium">
                                                 {place.distance}
                                             </span>
@@ -287,10 +287,10 @@ export default function PlacesToVisit() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+                        <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-6 font-medium">
                             Plan Your Exploration
                         </p>
-                        <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-6 tracking-wide">
+                        <h2 className="font-playfair-display text-3xl md:text-5xl text-white mb-6 tracking-[0.02em]">
                             Let Us Curate <br /> Your Itinerary
                         </h2>
                         <p className="font-montserrat text-white/70 font-light leading-loose max-w-2xl mx-auto mb-10 text-sm md:text-base">
@@ -299,7 +299,7 @@ export default function PlacesToVisit() {
                         </p>
                         <a
                             href="/contact"
-                            className="font-montserrat inline-flex items-center gap-3 bg-[#C1A87D] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg"
+                            className="font-montserrat inline-flex items-center gap-3 bg-[#4C6454] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#4C6454] transition-colors duration-300 shadow-lg"
                         >
                             Get in Touch
                             <ArrowRight size={16} />

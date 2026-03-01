@@ -28,14 +28,34 @@ export default function LiquidEffect() {
         buffer2Ref.current = new Float32Array(bw * bh);
     }, []);
 
-    // Delay mount to avoid flicker on page load
+    // Delay mount to avoid flicker on page load and check for desktop
+    const [isDesktop, setIsDesktop] = useState(true);
+
     useEffect(() => {
         const timer = setTimeout(() => setMounted(true), 200);
-        return () => clearTimeout(timer);
+
+        const mediaQuery = window.matchMedia("(min-width: 768px)");
+        setIsDesktop(mediaQuery.matches);
+
+        const listener = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
+        if (mediaQuery.addEventListener) {
+            mediaQuery.addEventListener("change", listener);
+        } else {
+            mediaQuery.addListener(listener);
+        }
+
+        return () => {
+            clearTimeout(timer);
+            if (mediaQuery.removeEventListener) {
+                mediaQuery.removeEventListener("change", listener);
+            } else {
+                mediaQuery.removeListener(listener);
+            }
+        };
     }, []);
 
     useEffect(() => {
-        if (!mounted) return;
+        if (!mounted || !isDesktop) return;
 
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -281,9 +301,9 @@ export default function LiquidEffect() {
             window.removeEventListener("mouseleave", onMouseLeave);
             window.removeEventListener("resize", resize);
         };
-    }, [mounted, initBuffers]);
+    }, [mounted, initBuffers, isDesktop]);
 
-    if (!mounted) return null;
+    if (!mounted || !isDesktop) return null;
 
     return (
         <canvas

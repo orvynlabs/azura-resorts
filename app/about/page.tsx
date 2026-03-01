@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Trees, Mountain, Waves, Shield, Fish, Utensils, Link } from "lucide-react";
+import { Trees, Mountain, Waves, Shield, Fish, Utensils, Link, ArrowRight } from "lucide-react";
 
 const highlights = [
   {
@@ -78,7 +78,7 @@ export default function About() {
               initial={{ width: 0 }}
               animate={{ width: "80px" }}
               transition={{ delay: 0.6, duration: 0.8 }}
-              className="h-[1px] bg-[#C1A87D] mx-auto"
+              className="h-[1px] bg-[#4C6454] mx-auto"
             />
           </div>
         </div>
@@ -92,23 +92,23 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-8 font-medium">
+            <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-8 font-medium">
               Welcome to
             </p>
             <h2 className="font-cinzel text-3xl md:text-5xl text-[#2C3E50] mb-8 leading-snug">
               A Sanctuary Where <br />
-              <span className="text-[#C1A87D]">Water Meets Tranquility</span>
+              <span className="text-[#668270]">Water Meets Tranquility</span>
             </h2>
-            <div className="w-24 h-[1px] bg-[#C1A87D] mx-auto mb-10" />
+            <div className="w-24 h-[1px] bg-[#4C6454] mx-auto mb-10" />
             <p className="font-montserrat text-gray-600 leading-[2] font-light text-sm md:text-base max-w-3xl mx-auto">
               Located in the tranquil village of Puttad, Meppadi, Azura is a secluded paradise
               perched on a serene peninsula overlooking the Padinjarathara reservoir. Spread across 20 cents of lush
-              private land, our resort is more than a destination — it is an exclusive retreat 
+              private land, our resort is more than a destination — it is an exclusive retreat
               designed for families and groups who seek solitude and an intimate connection with the water.
             </p>
             <p className="font-montserrat text-gray-600 leading-[2] font-light text-sm md:text-base max-w-3xl mx-auto mt-6">
-              Following a unique &quot;One Group at a Time&quot; model, Azura reflects the philosophy that true luxury 
-              lies in privacy — in the gentle sound of reservoir ripples, the mist over the hills, and the feeling of 
+              Following a unique &quot;One Group at a Time&quot; model, Azura reflects the philosophy that true peace
+              lies in privacy — in the gentle sound of reservoir ripples, the mist over the hills, and the feeling of
               having an entire peninsula all to yourself.
             </p>
           </motion.div>
@@ -125,7 +125,7 @@ export default function About() {
           className="absolute inset-0"
         >
           <Image
-            src="/gallery/fullproperty.jpg"
+            src="/gallery/about/fullview.webp"
             alt="Azura Property Overview"
             fill
             className="object-cover"
@@ -154,13 +154,13 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-20"
           >
-            <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-4 font-medium">
+            <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-4 font-medium">
               What Makes Us Special
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[#2C3E50] tracking-wide">
+            <h2 className="font-playfair-display text-[1.8rem] md:text-[2.6rem] text-[#1a1a1a] tracking-[0.02em]">
               The Azura Experience
             </h2>
-            <div className="w-16 h-[1px] bg-[#C1A87D] mx-auto mt-6" />
+            <div className="w-16 h-[1px] bg-[#4C6454] mx-auto mt-6" />
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -171,12 +171,12 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
-                className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#C1A87D]/30 text-center"
+                className="group p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-[#4C6454]/30 text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#C1A87D]/10 flex items-center justify-center text-[#C1A87D] group-hover:bg-[#C1A87D] group-hover:text-white transition-all duration-500">
+                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-[#4C6454]/10 flex items-center justify-center text-[#668270] group-hover:bg-[#4C6454] group-hover:text-white transition-all duration-500">
                   {item.icon}
                 </div>
-                <h3 className="font-cinzel text-lg text-[#2C3E50] tracking-wide mb-3">
+                <h3 className="font-playfair-display text-[1.2rem] text-[#1a1a1a] tracking-[0.02em] mb-3">
                   {item.title}
                 </h3>
                 <p className="font-montserrat text-gray-500 text-sm font-light leading-relaxed">
@@ -215,10 +215,10 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+            <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-6 font-medium">
               Our Philosophy
             </p>
-            <h2 className="font-cinzel text-3xl md:text-4xl text-[#2C3E50] mb-8 leading-relaxed">
+            <h2 className="font-playfair-display text-[1.8rem] md:text-[2.6rem] text-[#1a1a1a] mb-8 leading-[1.2] tracking-[0.02em]">
               Architecture Inspired <br /> by the Lake
             </h2>
             <p className="font-montserrat text-gray-600 leading-[2] font-light mb-6">
@@ -227,15 +227,15 @@ export default function About() {
               floor-to-ceiling glass, open-air decks, and minimal environmental impact.
             </p>
             <p className="font-montserrat text-gray-600 leading-[2] font-light mb-8">
-              We believe that true luxury lies in total seclusion. By hosting only one group at a time, 
-              we allow your experience to be shaped entirely by your family, your friends, and the 
+              We believe that true peace lies in total seclusion. By hosting only one group at a time,
+              we allow your experience to be shaped entirely by your family, your friends, and the
               serenity of the reservoir.
             </p>
 
             <div className="flex items-center gap-4">
-              <div className="w-12 h-[1px] bg-[#C1A87D]" />
-              <span className="font-montserrat text-[#C1A87D] text-xs tracking-[0.3em] uppercase font-medium">
-                Secluded Luxury Design
+              <div className="w-12 h-[1px] bg-[#4C6454]" />
+              <span className="font-montserrat text-[#668270] text-xs tracking-[0.3em] uppercase font-medium">
+                Secluded Nature Design
               </span>
             </div>
           </motion.div>
@@ -258,7 +258,7 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="font-montserrat text-xs tracking-[0.4em] text-[#C1A87D] uppercase mb-6 font-medium">
+            <p className="font-montserrat text-xs tracking-[0.4em] text-[#668270] uppercase mb-6 font-medium">
               Begin Your Journey
             </p>
             <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-8 leading-snug tracking-wide">
@@ -268,12 +268,13 @@ export default function About() {
               Whether you seek a family reunion, a celebratory getaway with friends, or simply a
               private place to reconnect with the water — Azura is where your story begins.
             </p>
-            <Link
+            <a
               href="/contact"
-              className="font-montserrat inline-block bg-[#C1A87D] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#a89268] transition-colors duration-300 shadow-lg hover:shadow-xl"
+              className="font-montserrat inline-flex items-center gap-3 bg-[#4C6454] text-white px-10 py-4 uppercase tracking-[0.2em] text-[10px] font-medium hover:bg-[#4C6454] transition-colors duration-300 shadow-lg"
             >
               Plan Your Visit
-            </Link>
+              <ArrowRight size={16} />
+            </a>
           </motion.div>
         </div>
       </section>

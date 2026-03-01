@@ -1,15 +1,19 @@
 import type { Metadata } from "next";
-import { Inter, Dancing_Script, Cinzel, Montserrat, Bricolage_Grotesque, Playfair_Display } from "next/font/google"; // Added Playfair_Display
+import { Inter, Dancing_Script, Cinzel, Montserrat, Bricolage_Grotesque, Playfair_Display, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import ScrollToTop from "@/components/ScrollToTop";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import SmoothScroll from "@/components/SmoothScroll";
+import { BookingProvider } from "@/context/BookingContext";
+import BookingModal from "@/components/BookingModal";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const dancingScript = Dancing_Script({ subsets: ["latin"], variable: "--font-dancing-script" });
 const cinzel = Cinzel({ subsets: ["latin"], variable: "--font-cinzel" });
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat" });
 const bricolageGrotesque = Bricolage_Grotesque({ subsets: ["latin"], variable: "--font-bricolage-grotesque" });
-const playfairDisplay = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair-display" }); // Initialize Playfair Display
+const playfairDisplay = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair-display" });
+const cormorantGaramond = Cormorant_Garamond({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700"], variable: "--font-cormorant-garamond" });
 
 export const metadata: Metadata = {
   title: "Azura - The Water View Resort",
@@ -23,10 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${dancingScript.variable} ${cinzel.variable} ${montserrat.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} font-sans antialiased`} suppressHydrationWarning>
-        <ScrollToTop />
-        <WhatsAppButton />
-        {children}
+      <body className={`${inter.variable} ${dancingScript.variable} ${cinzel.variable} ${montserrat.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} ${cormorantGaramond.variable} font-sans antialiased`} suppressHydrationWarning>
+        <BookingProvider>
+          <SmoothScroll />
+          <ScrollToTop />
+          <WhatsAppButton />
+          {children}
+          <BookingModal />
+        </BookingProvider>
       </body>
     </html>
   );

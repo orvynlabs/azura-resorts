@@ -12,40 +12,59 @@ interface GalleryImage {
     span?: string;
 }
 
-const categories = ["All", "Location", "Villas", "Facilities", "Activities", "Culinary"];
+const categories = ["All", "Location", "Gusts", "Villa", "tents", "Facilities", "Activities"];
 
 const galleryImages: GalleryImage[] = [
     // Location
-    { src: "/gallery/gallery/fullview.png", category: "Location", alt: "Panoramic view of Azura Resort on the reservoir", span: "col-span-2 row-span-2" },
-    { src: "/gallery/gallery/fullview.png", category: "Location", alt: "Full property aerial view of Azura" },
-    { src: "/gallery/gallery/swing (2).jpg", category: "Location", alt: "Scenic landscape around Azura Resort" },
-    { src: "/gallery/gallery/swing (2).jpg", category: "Location", alt: "Misty morning at the reservoir" },
-    { src: "/gallery/gallery/aframe.webp", category: "Location", alt: "Aerial view of the island resort" },
+    { src: "/gallery/gallery/fullview.webp", category: "Location", alt: "Panoramic view of Azura Resort on the reservoir", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/view.webp", category: "Location", alt: "Aerial view of the island resort" },
+    { src: "/gallery/gallery/view1.webp", category: "Location", alt: "Scenic landscape around Azura Resort" },
+    { src: "/gallery/gallery/view2.webp", category: "Location", alt: "Infinity pool overlooking the lake" },
 
-    // Villas
-    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "Premium A-Frame cottage", span: "col-span-2 row-span-2" },
-    { src: "/gallery/gallery/room.jpg", category: "Villas", alt: "Luxury room interior" },
-    { src: "/gallery/gallery/interior.jpg", category: "Villas", alt: "Cottage interior with modern amenities" },
-    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "A-Frame cottage exterior view" },
-    { src: "/gallery/gallery/aframe.webp", category: "Villas", alt: "A-Frame cottage nestled in forest" },
-    { src: "/gallery/gallery/room (3).jpg", category: "Villas", alt: "Deluxe room interior" },
+    // Villa
+    { src: "/gallery/gallery/aframe1.webp", category: "Villa", alt: "Premium A-Frame cottage", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/room.webp", category: "Villa", alt: "Luxury room interior" },
+    { src: "/gallery/gallery/room2.webp", category: "Villa", alt: "Luxury room interior" },
+    { src: "/gallery/gallery/room3.webp", category: "Villa", alt: "Luxury room interior" },
+    { src: "/gallery/gallery/room4.webp", category: "Villa", alt: "Deluxe room interior" },
+    { src: "/gallery/gallery/interior.webp", category: "Villa", alt: "Cottage interior with modern amenities" },
+    { src: "/gallery/gallery/interior1.webp", category: "Villa", alt: "Cottage interior with modern amenities" },
 
     // Facilities
-    { src: "/gallery/gallery/pool.jpeg", category: "Facilities", alt: "Infinity pool overlooking the lake" },
-    { src: "/gallery/gallery/dartboard.jpg", category: "Facilities", alt: "Indoor games - Dartboard" },
-    { src: "/gallery/gallery/carroms.jpg", category: "Facilities", alt: "Indoor games - Carrom board" },
-    { src: "/gallery/gallery/chess (2).jpg", category: "Facilities", alt: "Indoor games - Chess" },
-    { src: "/gallery/gallery/swing (2).jpg", category: "Facilities", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/pool.webp", category: "Facilities", alt: "Infinity pool overlooking the lake", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/dining.webp", category: "Facilities", alt: "Tent stay" },
+    { src: "/gallery/gallery/swing.webp", category: "Facilities", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/kitchen.webp", category: "Facilities", alt: "Tent stay" },
+    { src: "/gallery/gallery/grill.webp", category: "Facilities", alt: "Tent stay" },
+    { src: "/gallery/gallery/kitchen1.webp", category: "Facilities", alt: "Infinity pool overlooking the lake", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/speaker.webp", category: "Facilities", alt: "Lakeside swing" },
+
+    // tents stay
+    { src: "/gallery/gallery/tent.webp", category: "tents", alt: "Infinity pool overlooking the lake", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/tent2.webp", category: "tents", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/tent3.webp", category: "tents", alt: "Tent stay" },
+
+    // Gust
+    { src: "/gallery/gallery/g1.webp", category: "Gusts", alt: "Infinity pool overlooking the lake", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/g2.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g3.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g4.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g5.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g6.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g7.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g8.webp", category: "Gusts", alt: "Lakeside swing" },
+    { src: "/gallery/gallery/g9.webp", category: "Gusts", alt: "Lakeside swing" },
 
     // Activities
-    { src: "/gallery/experiences/campfire.webp", category: "Activities", alt: "Evening campfire under the stars", span: "col-span-2 row-span-2" },
-
-    // Culinary
-    { src: "/gallery/gallery/dining.jpg", category: "Culinary", alt: "Outdoor dining pavilion", span: "col-span-2 row-span-2" },
-    { src: "/gallery/gallery/dining.jpg", category: "Culinary", alt: "Authentic Kerala cuisine" },
+    { src: "/gallery/gallery/caroms.webp", category: "Activities", alt: "Evening campfire under the stars", span: "col-span-2 row-span-2" },
+    { src: "/gallery/gallery/dartboard.webp", category: "Activities", alt: "Indoor games - Dartboard" },
+    { src: "/gallery/gallery/campfire.webp", category: "Activities", alt: "Indoor games - Carrom board" },
+    { src: "/gallery/gallery/batminton.webp", category: "Activities", alt: "Indoor games - Chess" },
+    { src: "/gallery/gallery/carroms.webp", category: "Activities", alt: "Indoor games - Carrom board" },
+    { src: "/gallery/gallery/chess.webp", category: "Activities", alt: "Indoor games - Chess" },
 ];
 
-export default function GallerySlider() {
+export default function GallerySlider({ hideHeader = false }: { hideHeader?: boolean }) {
     const [activeCategory, setActiveCategory] = useState("All");
     const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
@@ -85,27 +104,29 @@ export default function GallerySlider() {
     return (
         <div className="bg-[#f8f5ef]">
             {/* Section Header */}
-            <div className="text-center pt-28 md:pt-36 pb-12 px-6">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                >
-                    <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-5 font-medium">
-                        The Exceptional Part
-                    </p>
-                    <h2 className="font-playfair-display text-[1.6rem] md:text-[2.4rem] leading-snug text-[#1a1a1a] tracking-[0.03em] mb-8">
-                        Explore Gallery
-                    </h2>
+            <div className={`text-center ${hideHeader ? 'pt-0 pb-12' : 'pt-28 md:pt-36 pb-12'} px-6`}>
+                {!hideHeader && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#668270] uppercase mb-5 font-medium">
+                            The Exceptional Part
+                        </p>
+                        <h2 className="font-playfair-display text-[1.6rem] md:text-[2.4rem] leading-snug text-[#1a1a1a] tracking-[0.03em] mb-8">
+                            Explore Gallery
+                        </h2>
 
-                    {/* Gold Ornamental Divider */}
-                    <div className="flex items-center justify-center gap-3 mb-14">
-                        <div className="h-[1px] w-20 bg-[#C1A87D]" />
-                        <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
-                        <div className="h-[1px] w-20 bg-[#C1A87D]" />
-                    </div>
-                </motion.div>
+                        {/* Gold Ornamental Divider */}
+                        <div className="flex items-center justify-center gap-3 mb-14">
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
+                            <div className="w-2.5 h-2.5 rotate-45 border border-[#4C6454]" />
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
+                        </div>
+                    </motion.div>
+                )}
 
                 {/* Category Filter Tabs */}
                 <motion.div
@@ -123,8 +144,8 @@ export default function GallerySlider() {
                                 font-montserrat text-[10px] md:text-[11px] tracking-[0.2em] uppercase px-7 py-3 
                                 border transition-all duration-300 font-medium
                                 ${activeCategory === cat
-                                    ? "bg-[#C1A87D] border-[#C1A87D] text-white"
-                                    : "bg-transparent border-[#1a1a1a]/15 text-[#1a1a1a]/60 hover:border-[#C1A87D] hover:text-[#C1A87D]"
+                                    ? "bg-[#4C6454] border-[#4C6454] text-white"
+                                    : "bg-transparent border-[#1a1a1a]/15 text-[#1a1a1a]/60 hover:border-[#4C6454] hover:text-[#668270]"
                                 }
                             `}
                         >
@@ -138,12 +159,12 @@ export default function GallerySlider() {
             <div className="max-w-[1280px] mx-auto px-4 md:px-6 pb-28 md:pb-36">
                 <motion.div
                     layout
-                    className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 auto-rows-[200px] md:auto-rows-[240px] lg:auto-rows-[280px]"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 auto-rows-[200px] md:auto-rows-[240px] lg:auto-rows-[280px] grid-flow-dense"
                 >
                     <AnimatePresence mode="popLayout">
                         {filtered.map((img, index) => (
                             <motion.div
-                                key={img.src}
+                                key={`${img.src}-${index}`}
                                 layout
                                 initial={{ opacity: 0, scale: 0.95 }}
                                 animate={{ opacity: 1, scale: 1 }}
@@ -254,7 +275,7 @@ export default function GallerySlider() {
                                         relative w-14 h-10 md:w-16 md:h-12 overflow-hidden flex-shrink-0 
                                         transition-all duration-300 border-2
                                         ${i === selectedImage
-                                            ? "border-[#C1A87D] opacity-100 scale-105"
+                                            ? "border-[#4C6454] opacity-100 scale-105"
                                             : "border-transparent opacity-50 hover:opacity-80"
                                         }
                                     `}

@@ -1,0 +1,58 @@
+
+> azuraresort@0.1.0 lint
+> eslint
+
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\app\experiences\page.tsx
+  8:10  warning  'Tent' is defined but never used      @typescript-eslint/no-unused-vars
+  8:16  warning  'Wind' is defined but never used      @typescript-eslint/no-unused-vars
+  8:22  warning  'Coffee' is defined but never used    @typescript-eslint/no-unused-vars
+  8:30  warning  'Waves' is defined but never used     @typescript-eslint/no-unused-vars
+  8:37  warning  'Utensils' is defined but never used  @typescript-eslint/no-unused-vars
+  8:47  warning  'Fish' is defined but never used      @typescript-eslint/no-unused-vars
+  8:53  warning  'Music' is defined but never used     @typescript-eslint/no-unused-vars
+  8:60  warning  'Flame' is defined but never used     @typescript-eslint/no-unused-vars
+  8:67  warning  'Target' is defined but never used    @typescript-eslint/no-unused-vars
+  8:75  warning  'Sparkles' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\app\page.tsx
+  19:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\app\page.tsx:19:5
+  17 |
+  18 |   useEffect(() => {
+> 19 |     setMounted(true);
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  20 |   }, []);
+  21 |
+  22 |   const { scrollYProgress } = useScroll({  react-hooks/set-state-in-effect
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\components\LiquidEffect.tsx
+  304:8  warning  React Hook useEffect has a missing dependency: 'isDesktop'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\components\WhatsAppButton.tsx
+  12:9  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+C:\Users\ADMIN\OneDrive\Desktop\Azura\azuraresort\components\WhatsAppButton.tsx:12:9
+  10 |
+  11 |     useEffect(() => {
+> 12 |         setMounted(true);
+     |         ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  13 |         // Show after a slight delay for a smooth entrance
+  14 |         const timer = setTimeout(() => setVisible(true), 2000);
+  15 |         return () => clearTimeout(timer);  react-hooks/set-state-in-effect
+
+✖ 13 problems (2 errors, 11 warnings)
+

@@ -14,14 +14,17 @@ export default function Gallery() {
 
             {/* Hero Section */}
             <div className="relative h-[60vh] md:h-[70vh] w-full overflow-hidden flex items-center justify-center">
-                <Image
-                    src="/gallery/gallery/fullview.png"
-                    alt="Gallery - Azura Resort"
-                    fill
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50" />
+                <div className="absolute inset-0 z-0">
+                    <video
+                        src="/gallery/gallery/bg-video.mp4"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover"
+                    />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/50 z-0" />
 
                 {/* Content */}
                 <div className="relative z-10 text-center px-6">
@@ -29,7 +32,7 @@ export default function Gallery() {
                         initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6"
+                        className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#668270] uppercase mb-6"
                     >
                         Visual Journey
                     </motion.p>
@@ -49,9 +52,9 @@ export default function Gallery() {
                         transition={{ delay: 0.6, duration: 0.6 }}
                         className="flex items-center justify-center gap-3"
                     >
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
-                        <div className="w-2 h-2 rotate-45 border border-[#C1A87D]" />
-                        <div className="h-[1px] w-16 bg-[#C1A87D]" />
+                        <div className="h-[1px] w-16 bg-[#4C6454]" />
+                        <div className="w-2 h-2 rotate-45 border border-[#4C6454]" />
+                        <div className="h-[1px] w-16 bg-[#4C6454]" />
                     </motion.div>
 
                     {/* Breadcrumb */}
@@ -62,7 +65,7 @@ export default function Gallery() {
                         className="mt-8"
                     >
                         <p className="font-montserrat text-[11px] tracking-[0.2em] text-white/60">
-                            <Link href="/" className="hover:text-[#C1A87D] transition-colors">Home</Link>
+                            <Link href="/" className="hover:text-[#668270] transition-colors">Home</Link>
                             <span className="mx-3">—</span>
                             <span className="text-white/80">Gallery</span>
                         </p>
@@ -79,7 +82,7 @@ export default function Gallery() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#C1A87D] uppercase mb-6 font-medium">
+                        <p className="font-montserrat text-[10px] md:text-xs tracking-[0.5em] text-[#668270] uppercase mb-6 font-medium">
                             Through Our Lens
                         </p>
                         <h2 className="font-playfair-display text-[1.6rem] md:text-[2.4rem] lg:text-[2.8rem] leading-[1.35] text-[#1a1a1a] tracking-[0.03em] mb-10">
@@ -89,20 +92,20 @@ export default function Gallery() {
 
                         {/* Decorative Gold Divider */}
                         <div className="flex items-center justify-center gap-3 mb-10">
-                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
-                            <div className="w-2.5 h-2.5 rotate-45 border border-[#C1A87D]" />
-                            <div className="h-[1px] w-20 bg-[#C1A87D]" />
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
+                            <div className="w-2.5 h-2.5 rotate-45 border border-[#4C6454]" />
+                            <div className="h-[1px] w-20 bg-[#4C6454]" />
                         </div>
 
                         <p className="font-montserrat text-[#5a5a5a] text-[13px] md:text-[15px] leading-[2.1] font-light max-w-[800px] mx-auto">
-                            From the misty mornings over the reservoir to the golden glow of sunset through the forest canopy — explore Azura through a curated collection of moments. Each photograph captures the raw beauty, intimate luxury, and timeless charm of our island retreat.
+                            From the misty mornings over the reservoir to the golden glow of sunset through the forest canopy — explore Azura through a curated collection of moments. Each photograph captures the raw beauty, intimate peace, and timeless charm of our island retreat.
                         </p>
                     </motion.div>
                 </div>
             </section>
 
             {/* Gallery Section */}
-            <GallerySlider />
+            <GallerySlider hideHeader={true} />
 
             <Footer />
         </main>
