@@ -200,7 +200,7 @@ export default function About() {
             className="relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="/gallery/aframe.jpg"
+              src="/gallery/about/aframe1.webp"
               alt="Azura A-Frame Cottage"
               fill
               className="object-cover"
@@ -245,7 +245,7 @@ export default function About() {
       {/* Vision / CTA Section */}
       <section className="relative py-32 overflow-hidden">
         <Image
-          src="/gallery/swing.jpg"
+          src="/gallery/about/swing-view.webp"
           alt="Azura Swing"
           fill
           className="object-cover"

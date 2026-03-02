@@ -15,25 +15,60 @@ import { useBooking } from "@/context/BookingContext";
 
 const experiencesData = [
   {
-    image: "/gallery/gallery/aframe.webp",
+    image: "/gallery/experiences/a-frame.webp",
+    tagline: "ARCHITECTURAL MARVEL",
+    title: "A-Frame Lake View Stay",
+    subtitle: "SIGNATURE FOREST COTTAGES",
+    description: "Our signature A-frame cottages are architectural masterpieces designed to bring the outdoors in. Wake up to the gentle mist over the water and enjoy the peace of a private balcony that offers an uninterrupted view of the lake."
+  },
+  {
+    image: "/gallery/experiences/tentstay.webp",
     tagline: "NATURE'S EMBRACE",
-    title: "Suspended Living",
-    subtitle: "SIGNATURE A-FRAME TENTS",
-    description: "Experience the thrill of the wild with resort-grade security. Our lake-facing A-frame tents are fully rain-safe and forest-integrated, featuring premium bedding and private deck access to watch the reservoir ripples under the stars."
+    title: "Lake View Tent Stay",
+    subtitle: "PREMIUM RAIN-SAFE GLAMPING",
+    description: "Experience the thrill of the wild with the security of a resort. Our lake-facing A-frame tents are fully rain-safe and forest-integrated, featuring premium bedding, cooling fans, and private deck access to watch the reservoir ripples under the stars."
   },
   {
-    image: "/gallery/gallery/pool.jpeg",
+    image: "/gallery/experiences/dining.webp",
+    tagline: "CULINARY VISTA",
+    title: "Lake View Dining",
+    subtitle: "OPEN-AIR PAVILION EXPERIENCE",
+    description: "Experience the magic of a meal overlooking the vast Karappuzha reservoir. Our dining area is positioned to provide breathtaking water views where the cool breeze and forest sounds create the perfect backdrop for every meal."
+  },
+  {
+    image: "/gallery/experiences/pool.webp",
     tagline: "THE OASIS",
-    title: "Private Plunge Pool",
-    subtitle: "EXCLUSIVE LAKESIDE SANCTUARY",
-    description: "Submerge into our pristine 5x3 meter private swimming pool. Designed with a gentle 5ft uniform depth, it perfectly balances relaxation and safety—reserved exclusively for your private group overlooking the Padinjarathara Reservoir."
+    title: "Kids & Family Pool",
+    subtitle: "SAFE & SERENE AQUA ZONE",
+    description: "Beyond the infinity edge, we offer a dedicated swimming area perfect for families. Safe, clean, and surrounded by greenery, it’s a great spot for fun splashes with the kids in complete privacy."
   },
   {
-    image: "/gallery/gallery/dining.jpg",
-    tagline: "THE EXPERIENCE",
-    title: "Culinary Pavilion",
-    subtitle: "MALABAR TRADITIONAL FLAVORS",
-    description: "Savour authentic, earthy meals prepared from the finest regional ingredients. From live lake fish to traditional Kerala delicacies, every dish celebrates the flavours of Wayanad — best enjoyed with the forest breeze."
+    image: "/gallery/experiences/traditional-food.webp",
+    tagline: "HERITAGE FLAVORS",
+    title: "Homely Traditional Cuisine",
+    subtitle: "AUTHENTIC MALABAR SPECIALTIES",
+    description: "Savor the authentic soul of Kerala with our 'homely' food experience. We specialize in traditional Malabar flavors, prepared with locally sourced spices and farm-fresh ingredients from the heart of Wayanad."
+  },
+  {
+    image: "/gallery/experiences/live-fish.webp",
+    tagline: "WATER TO PLATE",
+    title: "Live Lake Fish Dining",
+    subtitle: "FRESH RESERVOIR DELICACIES",
+    description: "From the water to your plate—experience the ultimate freshness with our live lake fish specialty. Pick your catch and watch as our chefs transform it into a flavorful delicacy using traditional clay pot or Tawa styles."
+  },
+  {
+    image: "/gallery/experiences/fishing.webp",
+    tagline: "QUIET RHYTHMS",
+    title: "Private Fishing Point",
+    subtitle: "LAKESIDE ANGLING RETREAT",
+    description: "Find your calm at our dedicated lakeside fishing point. Whether you are a seasoned angler or a beginner, the serene banks offer a peaceful spot to cast a line and enjoy the quiet rhythm of the reservoir."
+  },
+  {
+    image: "/gallery/experiences/campfire.webp",
+    tagline: "EVENING MAGIC",
+    title: "Campfire & Musical Nights",
+    subtitle: "CELEBRATIONS UNDER THE STARS",
+    description: "As the sun sets, the magic begins. Gather around a crackling campfire for an evening of music, laughter, and storytelling. It’s the perfect way to unwind with your private group under the clear Wayanad sky."
   }
 ];
 
@@ -227,7 +262,7 @@ export default function Home() {
 
         <section ref={heroRef} className="relative h-screen w-full overflow-hidden flex items-center justify-center">
           <motion.div style={mounted ? { y: heroY } : undefined} className="absolute inset-0 w-full h-[110%] will-change-transform">
-            <Image src="/resort_main_image.PNG" alt="Azura Resort" fill priority unoptimized quality={100} className="object-cover object-center animate-kenburns" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.15)" }} sizes="100vw" />
+            <Image src="/gallery/home/main-bg.webp" alt="Azura Resort" fill priority unoptimized quality={100} className="object-cover object-center animate-kenburns" style={{ filter: "brightness(1.1) contrast(1.1) saturate(1.15)" }} sizes="100vw" />
             <HeroOverlay />
           </motion.div>
           <LiquidEffect />
@@ -303,17 +338,17 @@ export default function Home() {
               {[
                 {
                   title: "Signature A-Frame Stay",
-                  img: "/gallery/gallery/aframe.webp",
+                  img: "/gallery/home/aframe.webp",
                   desc: "Rain-safe, forest-integrated living. Experience the thrill of the wild with premium glass-front interiors and private deck access."
                 },
                 {
                   title: "Premium Lake View Rooms",
-                  img: "/gallery/gallery/room.jpg",
+                  img: "/gallery/home/room.webp",
                   desc: "Elegant Non-AC bedrooms featuring Queen-size beds and 180° reservoir panoramic views, placing water right outside your window."
                 },
                 {
                   title: "Lakeside Sanctuary",
-                  img: "/gallery/gallery/fullview.png",
+                  img: "/gallery/home/fullview.webp",
                   desc: "A private peninsula retreat where nature becomes your front yard. Absolute seclusion bordered by water on three sides, exclusively yours to explore."
                 }
               ].map((room, i) => (
@@ -433,7 +468,7 @@ export default function Home() {
             <h2 className="font-cinzel text-4xl md:text-5xl leading-snug text-[#1a1a1a] tracking-[0.03em] font-medium">Your Pathway</h2>
           </div>
           <div className="max-w-[1200px] mx-auto h-[500px] md:h-[650px] rounded-[40px] overflow-hidden relative shadow-2xl group border-[8px] border-white z-10 transition-transform duration-700 hover:-translate-y-4">
-            <Image loading="lazy" src="/gallery/gallery/fullview.png" alt="Map View" fill className="object-cover saturate-50 hover:saturate-100 mix-blend-multiply opacity-80 group-hover:scale-[1.03] transition-all duration-1000 ease-out" />
+            <Image loading="lazy" src="/gallery/home/fullview.webp" alt="Map View" fill className="object-cover saturate-50 hover:saturate-100 mix-blend-multiply opacity-80 group-hover:scale-[1.03] transition-all duration-1000 ease-out" />
             <div className="absolute inset-0 bg-[#324536]/10 pointer-events-none" />
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <motion.div initial={{ scale: 0.9, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true, margin: "-10% 0px -10% 0px" }} transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }} className="bg-white/85 backdrop-blur-2xl px-12 py-10 rounded-[40px] text-center shadow-2xl border border-white hover:y-[-5px] transition-transform duration-500 pointer-events-auto">
